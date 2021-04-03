@@ -1,0 +1,227 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<form id="form_main">
+
+	<div id="tab_1" class="col s12 st_lks container_ft_1 height_-137px div_container" data-col="scroll_tab_1" data-col_2="div_width_-5px">
+
+		<div class='col s12 sub_container'>
+		
+			<div class="col s12 m12 l6 xl6">
+				<section>
+					<div class="row" style='height: 47px;'>
+						<div class="col s12" style='height: 20px;'>
+							<div class='col_label_head'>Datos del Alumno</div>
+						</div>
+						<div class='lks switch'>
+							<label>
+								<span>Estado</span>
+								<input type='checkbox' class='show_cest' data-col='cest' data-hb_v='n' data-hb_n='s' data-hb_e='s' />
+								<span class='lever'></span>
+							</label>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col s3">
+							<div class='col_label' data-col_dsc='ccod_prs2'>Código</div>
+							<input type="text" placeholder="" value="" class='lks' data-col='ccod_prs2' data-hb_v="n" data-hb_n="s" data-hb_e="s" required />
+						</div>
+					</div>
+					
+					
+					<!--
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='aac'>Persona</div>
+							</div>
+							<div class="col s3 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_aac' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m9 l9 xl9">
+								<select class="select2 s2" data-col='aac' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select>
+							</div>
+						</div>
+					</div>
+					-->
+					
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-lnk='_lnk_open_modal_prs' data-col_dsc='ccod_prs_alu' data-hb_v="n" data-hb_n="s" data-hb_e="n">Persona</div>
+								
+								<!--
+								<div class='col_label_head'>
+									<label data-lnk='_lnk_add_row_doc' data-hb_v='n' data-hb_n='s' data-hb_e='s'>Persona</label>
+								</div>
+								-->
+								
+							</div>
+							<div class="col s3 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_prs_alu' data-hb_v="n" data-hb_n="n" data-hb_e="n" required />
+							</div>
+							<div class="col s12 m9 l9 xl9">
+								<input type="text" placeholder="" value="" class='lks' data-col='cdsc_prs_alu' data-hb_v="n" data-hb_n="n" data-hb_e="n" required />
+							</div>
+						</div>
+					</div>
+					
+					
+					<!--
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='nac'>Nivel Académico</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_nac' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<select class="select2 s2" data-col='nac' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select>
+							</div>
+						</div>
+					</div>
+					-->
+
+				</section>
+			</div>
+
+			<div class="col s12 m12 l6 xl6">
+
+				<section>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label_head'>
+								<label data-lnk='_lnk_nueva_dir' data-hb_v='n' data-hb_n='s' data-hb_e='s'>Personas relacionadas</label>
+							</div>
+						</div>
+					</div>
+					
+					<div class='row data-row_head display_none' id='pp2'>
+						<!-- <div class='col s12 ft_sc'> -->
+							<div class='col s4'>
+								<div class='col_label' data-col_dsc='it_tip'>Tipo de Medio</div>
+							</div>
+							<div class='col s8' data-col_before='s7' data-col_after='s8'>
+								<div class='col_label' data-col_dsc='it_tip'>Descripción</div>
+							</div>
+						<!-- </div> -->
+					</div>
+					
+					<div data-rows='dir'></div>
+				</section>
+
+			</div>
+			
+		</div>
+	
+	</div>
+
+</form>
+
+
+<!-- Modal Item -->
+<!-- <div id="mdl_grid_it" class="modal modal-fixed-footer modal-find-standard row-fixed-1 modal-footer-simple width_55 height_90 finish_load_modal" data-button_close='out'> -->
+<div id="mdl_grid_it" class="modal modal-fixed-footer_ft_1 width_55 height_65 finish_load_modal" data-button_close='out'>
+    <header class="modal_header">
+        <div class="modal_header_inner">
+            <h3 class='m-all-0'>Detalle de persona relacionada</h3>
+        </div>
+    </header>
+    
+	<div class='modal-content st_lks height_-119px'>
+
+		<form id="frm_grid_it" class="full_height">
+		
+			<div class="col s12 sub_container full_height">
+			
+				<div class="col s12 full_height">
+					
+					<section class='ft_1' id="mdl_grid_it_sc_2">
+						<div class='row'>
+							<div class="col s12">
+								<div class='col_label'>Alumno</div>
+							</div>
+							<div class="col s3 hide_for_600px">
+								<input type="text" class='lks' data-col='ccod_prs_alu' placeholder="" value="" readonly />
+							</div>
+							<div class="col s12 m9 l9 xl9">
+								<input type="text" class='lks' data-col='cdsc_prs_alu' placeholder="" value="" readonly />
+							</div>
+						</div>
+					</section>
+
+					<!-- <div class="modal-sub-content p-right-15 div_width_15px" data-col="scroll_div_mdl_grid_it_1" data-col_2="div_width_10px"> -->
+					<div class="modal-sub-content" data-col="scroll_div_mdl_grid_it_1" data-col_2="div_width_10px">
+					
+						<section class='ft_1'>
+							<div class="row">
+								<div class="col s12">
+									<div class='col_label_head'>Persona relacionada</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col s3">
+									<div class='col_label' data-col_dsc='ccod_prs2'>Código</div>
+									<input type="text" placeholder="" value="" class='lks' data-col='ccod_prs2' data-hb_v="n" data-hb_n="s" data-hb_e="s" required />
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="c_col col s12">
+									<div class="col s12">
+										<div class='col_label' data-lnk='_lnk_open_modal_prs_rel' data-col_dsc='ccod_prs_rel' data-hb_v="n" data-hb_n="s" data-hb_e="n">Persona</div>
+										
+										<!--
+										<div class='col_label_head'>
+											<label data-lnk='_lnk_add_row_doc' data-hb_v='n' data-hb_n='s' data-hb_e='s'>Persona</label>
+										</div>
+										-->
+										
+									</div>
+									<div class="col s3 hide_for_600px">
+										<input type="text" placeholder="" value="" class='lks' data-col='ccod_prs_rel' data-hb_v="n" data-hb_n="n" data-hb_e="n" required />
+									</div>
+									<div class="col s12 m9 l9 xl9">
+										<input type="text" placeholder="" value="" class='lks' data-col='cdsc_prs_rel' data-hb_v="n" data-hb_n="n" data-hb_e="n" required />
+									</div>
+								</div>
+							</div>
+
+							<div class='row'>
+								<div class="col s3">
+									<div class='col_label'>Relación</div>
+									<select class="select2 s2" data-col='lp' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-zi="mdl_grid_it" required></select>
+								</div>
+								
+								<div class="col s9">
+									<div class='col_label'>Observaciones</div>
+									<input type="text" placeholder="" value="" class='lks' data-col='cobs' data-hb_v="n" data-hb_n="s" data-hb_e="s" />
+								</div>
+								
+							</div>
+							
+						</section>
+
+					</div>
+				
+				</div>
+			
+			</div>
+
+		</form>
+	</div>
+
+    <div class="modal-footer">
+        <button class="button-1 waves-effect" data-lnk='_lnk_grid_it_aceptar'>Agregar</button>
+        <button class="button-1 waves-effect modal-close">Cancelar</button>
+    </div>
+</div>
+
+@section scripts
+{
+<script type="text/javascript" src="../../scripts/lks/frm_ga_alu_ct.js"></script>
+}

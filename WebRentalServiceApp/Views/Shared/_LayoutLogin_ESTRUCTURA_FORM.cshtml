@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<!--<html lang="es" xml:lang="es">-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>SOFTWARE S7</title>
+    @*<link rel="icon" href="@Url.Content("~/Content/images/ap8.png")" />*@
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundlesbefore/lib")
+
+<script></script>
+
+<script>
+
+$(document).ready(function() {
+
+	
+});
+
+</script>
+
+<script>
+
+window.onload = function () {
+	/*
+	var contenedor = document.getElementById('contenedor_carga');
+	contenedor.style.visibility = 'hidden';
+	contenedor.style.opacity = 0;
+	*/
+	/*
+	var contenedor = document.getElementById('contenedor_carga_falso');
+	contenedor.style.visibility = 'hidden';
+	contenedor.style.opacity = 0;
+	*/
+	
+	<!-- $("#tab_main").tabs(); -->
+	<!-- $(".tabs").tabs(); -->
+	
+	
+	var contenedor = document.getElementById('contenedor_carga');
+	contenedor.style.visibility = 'hidden';
+	contenedor.style.opacity = 0;
+	
+	$('body').removeClass('overflow_hidden');
+};
+
+</script>
+
+</head>
+
+<body class="overflow_hidden" style="background-color: #fff;">
+	
+	<div id="contenedor_carga">
+		<div class="loader-four center">
+			<div class='dice'>
+				<div class="side one"></div>
+				<div class="side two"></div>
+				<div class="side three"></div>
+				<div class="side four"></div>
+				<div class="side five"></div>
+				<div class="side six"></div>
+			</div>
+		</div>
+	</div>
+
+	@RenderBody()
+	
+	<!--
+    <div class="container">
+	
+		<div class="row">
+			
+			@RenderBody()
+		</div>
+    </div>
+	-->
+
+    @Scripts.Render("~/bundlesafter/lib")
+    @RenderSection("scripts", required: false)
+    @RenderSection("Styles", false)
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<form id="form_main">
+
+	<div id="tab_1" class="col s12 st_lks container_ft_1 height_-137px div_container" data-col="scroll_tab_1" data-col_2="div_width_-5px">
+
+		<div class='col s12 sub_container'>
+		
+			<div class="col s12 m12 l6 xl6">
+				<section>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label_head'>Datos Relacionados</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='opfa'>Año Académico</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_aac' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<select class="select2 s2" data-col='aac' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<div class="col s12 m12 l6 xl6">
+				<section>
+						
+					<div class="row" style='height: 47px;'>
+						<div class="col s12" style='height: 20px;'>
+							<div class='col_label_head'>Nivel Académico</div>
+						</div>
+						<div class='lks switch'>
+							<label>
+								<span>Estado</span>
+								<input type='checkbox' class='show_cest' data-col='cest' data-hb_v='n' data-hb_n='s' data-hb_e='s' />
+								<span class='lever'></span>
+							</label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col s4">
+							<div class='col_label' data-col_dsc='ccod_nac'>Código</div>
+							<input type="text" placeholder="" value="" class='lks' data-col='ccod_nac' data-hb_v="n" data-hb_n="s" data-hb_e="s" required />
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label' data-col_dsc='cdsc_nac'>Descripción</div>
+							<input type="text" placeholder="" value="" class='lks' data-col='cdsc_nac' data-hb_v="n" data-hb_n="s" data-hb_e="s" required />
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label' data-col_dsc='ccar_nac'>Carrera</div>
+							<input type="text" placeholder="" value="" class='lks' data-col='ccar_nac' data-hb_v="n" data-hb_n="s" data-hb_e="s" />
+						</div>
+					</div>
+				
+				</section>
+
+			</div>
+			
+		</div>
+	
+	</div>
+
+</form>
+@section scripts
+{
+<script type="text/javascript" src="../../scripts/lks/frm_ga_nac_ct.js"></script>
+}

@@ -1,0 +1,151 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<form id="form_main">
+	
+	<div id="tab_1" class="col s12 st_lks container_ft_1 height_-137px div_container" data-col="scroll_tab_1" data-col_2="div_width_-5px">
+
+		<div class='col s12 sub_container'>
+		
+			<div class="col s12 m12 l6 xl6">
+			
+				<section>
+
+					<div class="row" style='height: 47px;'>
+						<div class="col s12" style='height: 20px;'>
+							<div class='col_label_head'>Datos Principales</div>
+						</div>
+						<div class='lks switch'>
+							<label>
+								<span>Estado</span>
+								<input type='checkbox' class='show_cest' data-col='cest' data-hb_v='n' data-hb_n='s' data-hb_e='s' />
+								<span class='lever'></span>
+							</label>
+						</div>
+					</div>
+										
+					<div class="row">
+						<div class="col s4">
+							<div class='col_label' data-col_dsc='ccod_opve'>Código</div>
+							<input type="text" class='lks' autocomplete="off" placeholder="" value="" data-col='ccod_opve' data-hb_v="n" data-hb_n="s" data-hb_e="n" required />
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label' data-col_dsc='cdsc_opve'>Descripción</div>
+							<input type="text" class='lks' autocomplete="off" placeholder="" value="" data-col='cdsc_opve' data-hb_v="n" data-hb_n="s" data-hb_e="s" required />
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='doc'>Tipo de Documento</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_doc' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<select class="select2 s2" data-col='doc' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select>
+							</div>
+						</div>
+					</div>
+
+					<div class='row'>
+						<div class="col s4">
+							<div class='col_label'>Impuesto</div>
+							
+							<select class='select2 s2' data-col='_dsl_bafecto_igv' data-allow-clear='false' data-hb_v='n' data-hb_n='s' data-hb_e='s' required>
+								<option value='0'>No Grabado</option>
+								<option value='1'>Según Artículo</option>
+							</select>
+							
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='mon'>Moneda</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_mon' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<select class="select2 s2" data-col='mon' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select>
+							</div>
+						</div>
+					</div>
+					
+				</section>
+
+			</div>
+
+			<div class="col s12 m12 l6 xl6">
+			
+				<section>
+				
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label_head'>Parámetros</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='opal_sal'>Operación Almacén - Salidas</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_opal_sal' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<select class="select2 s2" data-col='opal_sal' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod></select>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='opal_anu'>Operación Almacén - Anulación</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_opal_anu' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<select class="select2 s2" data-col='opal_anu' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod></select>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='opve_nc'>Operación de Venta - Nota de Crédito</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_opve_nc' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<select class="select2 s2" data-col='opve_nc' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod></select>
+							</div>
+						</div>
+					</div>
+					
+				</section>
+
+			</div>
+
+		</div>
+	
+	</div>
+
+</form>
+
+@section scripts
+{
+<script type="text/javascript" src="../../scripts/lks/frm_ve_ct_opve.js"></script>
+}

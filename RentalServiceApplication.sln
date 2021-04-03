@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Centrix.DataAccess", "Centrix.DataAccess\Centrix.DataAccess.csproj", "{CB27969C-E044-4D27-9C01-3FD3EC239266}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Centrix.BusinessLogic", "Centrix.BusinessLogic\Centrix.BusinessLogic.csproj", "{91C308D8-AEBE-427A-973D-A93BCD84AD27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Centrix.Entity", "Centrix.Entity\Centrix.Entity.csproj", "{BA5DE63D-9C4B-48B0-AF87-6842964BA825}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Centrix.Common", "Centrix.Common\Centrix.Common.csproj", "{6BA0DFB5-4507-4C99-81CA-35C6D5F8E560}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRentalServiceApp", "WebRentalServiceApp\WebRentalServiceApp.csproj", "{93ABEFBD-8F10-49AD-8077-3F688EB88632}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Centrix.Library", "Centrix.Library\Centrix.Library.csproj", "{1C6E2B4F-8D4E-41EA-97BA-50DA4C9398BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB27969C-E044-4D27-9C01-3FD3EC239266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB27969C-E044-4D27-9C01-3FD3EC239266}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB27969C-E044-4D27-9C01-3FD3EC239266}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB27969C-E044-4D27-9C01-3FD3EC239266}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91C308D8-AEBE-427A-973D-A93BCD84AD27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91C308D8-AEBE-427A-973D-A93BCD84AD27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91C308D8-AEBE-427A-973D-A93BCD84AD27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91C308D8-AEBE-427A-973D-A93BCD84AD27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA5DE63D-9C4B-48B0-AF87-6842964BA825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA5DE63D-9C4B-48B0-AF87-6842964BA825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA5DE63D-9C4B-48B0-AF87-6842964BA825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA5DE63D-9C4B-48B0-AF87-6842964BA825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BA0DFB5-4507-4C99-81CA-35C6D5F8E560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BA0DFB5-4507-4C99-81CA-35C6D5F8E560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BA0DFB5-4507-4C99-81CA-35C6D5F8E560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BA0DFB5-4507-4C99-81CA-35C6D5F8E560}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93ABEFBD-8F10-49AD-8077-3F688EB88632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93ABEFBD-8F10-49AD-8077-3F688EB88632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93ABEFBD-8F10-49AD-8077-3F688EB88632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93ABEFBD-8F10-49AD-8077-3F688EB88632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C6E2B4F-8D4E-41EA-97BA-50DA4C9398BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C6E2B4F-8D4E-41EA-97BA-50DA4C9398BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C6E2B4F-8D4E-41EA-97BA-50DA4C9398BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C6E2B4F-8D4E-41EA-97BA-50DA4C9398BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

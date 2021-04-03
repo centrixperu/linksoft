@@ -1,0 +1,378 @@
+﻿@{
+    ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_LayoutChart.cshtml";
+}
+<form id="form_main">
+
+	<!-- <div id="tab_1" class="col s12 st_lks container_ft_1 height_-119px" data-col="scroll_tab_1" data-col_2="div_width_-5px"> -->
+	<div class="col s12 st_lks container_ft_1 height_-119px" data-col="scroll_tab_1" data-col_2="div_width_-5px">
+
+		<div class="col s12 sub_container full_height">
+
+			<!-- <div class="col s6 container_table footer_fixed"> -->
+			<div id="tab_1" class="col s12 m12 l6 xl6 container_table footer_fixed">
+			
+				<section class='ft_1'>
+					<div class="row">
+						<div class="col s4 m4 l3 xl2 hide_for_600px">
+							<div class='col_label'>Ejercicio</div>
+							<select class="select2 s2" data-col='easdmp' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s"></select>
+						</div>
+						<div class="col s9 m6 l4 xl4">
+							<div class='col_label'>Moneda</div>
+							<select class="select2 s2" data-col='easdm1p' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s"></select>
+						</div>
+
+						<!--
+						<div class="col s3 m2 l5 xl6">
+							<div class='col_label'> </div>
+							<button type='button' class='button-1 waves-effect modal-close' onclick='graficar();'>Aplicar</button>
+						</div>
+						-->
+
+					</div>
+				</section>
+
+				<section class='ft_1'>
+					<div class="row">
+						<div class="col s4 m4 l4 xl3 hide_for_600px" data-col='c_s_grid_lista_filtros'>
+							<div class='col_label'>Filtrar por</div>
+						</div>
+						<div class="col s9 m6 l5 xl7">
+							<div class='col_label'>Valor</div>
+							<input class='lks' placeholder="Digite valor a buscar" value="" type="text" data-col="i_filter_grid_lista" />
+						</div>
+						<div class="col s3 m2 l3 xl2">
+							<div class='col_label'> </div>
+							<div data-col="c_length_grid_lista"></div>
+						</div>
+					</div>
+				</section>
+				
+				<div class="content_table" data-col='scroll_grid_lista' data-col_2="p-right-15">
+					<div class="row">
+						<div class="c_col col s12" data-col="c_grid_lista"></div>
+					</div>
+				</div>
+
+				<div class="dataTables_wrapper" data-col="c_footer_grid_lista"></div>
+				
+			</div>
+			
+			<div id="tab_2" class="col s12 m12 l6 xl6 container_table footer_fixed">
+			fernando 2222
+			</div>
+			
+			<div id="tab_3" class="col s12 m12 l6 xl6 container_table footer_fixed">
+			fernando 333
+			</div>			
+			
+			
+			
+			<!-- <div class="col s12 m12 l6 xl6"> -->
+			<div class="col s12 m12 l6 xl6">
+			
+				<section class='ft_2 m-bottom-0'>
+				
+					<div class="row">
+						<div class="col s9">
+							<div class='col_label_head'>Resumen Mensual de Ventas</div>
+						</div>
+						<div class="col s3">
+							<!-- <select class="select2 s2" data-col='easdmp' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s"></select> -->
+							
+							<select class='select2 s2' data-col='sel_grafico' data-allow-clear='false'>
+								<option value='1'>Circular</option>
+								<option value='2'>Barra Vertical</option>
+								<option value='3'>Barra Horizontal</option>
+								<option value='4'>Lineal</option>
+								<option value='5'>Area</option>
+							</select>
+							
+						</div>
+					</div>
+				
+					<!-- <div class="row"> -->
+					<div class="row content_grafico" data-col='scroll_grid_lista1' data-col_2="p-right-15">
+					
+						<div class="col s12 contenedor_items_center">
+							
+							<div id="gf_barra_vertical" class="chart_gf_barra_vertical"></div>
+							
+							<div id="gf_circular" class="chart_gf_circular"></div>
+							
+							<div id="gf_barra_horizontal" class="chart_gf_barra_horizontal"></div>
+							
+							<div id="gf_area" class="chart_gf_area"></div>
+							
+						</div>
+					</div>
+				</section>
+
+				
+				<!--
+				<section class='ft_1'>
+					<div class="row">
+						<div class="col s12 contenedor_items_center">
+							<div id="g1" class="chart_g1"></div>
+						</div>
+					</div>
+				</section>
+				-->
+				
+				
+				
+			</div>
+
+		</div>
+		
+		
+		
+		<!-- ===================================================================== -->
+		<!-- ===================================================================== -->
+		
+		
+		
+		
+		<!-- <div id='c_initial_sync' class="col s12"> -->
+		<!--
+		<div class="col s12">
+
+			<div class="row">
+				<div class="col s12">
+					<div id="main"></div>
+				</div>
+			</div>
+
+		</div>
+		-->
+		
+		<!-- ===================================================================== -->
+		<!-- ===================================================================== -->
+		
+		<!--
+		<div id='c_initial_sync' class="col s12">
+			<div class="row">
+				<div class="col s12">
+					<div class="chart" id="sync"></div>
+				</div>
+			</div>
+		</div>
+		-->
+		
+		<!-- ===================================================================== -->
+		<!-- ===================================================================== -->
+		
+		
+
+	</div>
+
+</form>
+
+
+
+<!-- Modal Item -->
+<!-- <div id="mdl_grid_it" class="modal modal-fixed-footer modal-find-standard row-fixed-1 modal-footer-simple width_55 height_90" data-button_close='out'> -->
+<div id="mdl_grid_it" class="modal modal-fixed-footer_ft_1 width_90 height_90" data-button_close='in'>
+    <header class="modal_header">
+        <div class="modal_header_inner">
+            <h3 class='m-all-0'>Detalle del item</h3>
+        </div>
+    </header>
+    
+	<div class='modal-content st_lks height_-119px'>
+
+		<form id="frm_grid_it" class="full_height">
+		
+			<div class="col s12 sub_container full_height">
+			
+				<div class="col s12 full_height">
+					
+					<section class='ft_1'>
+						<div class='row'>
+							<div class="col s12">
+								<div class='col_label' data-col='ctipo_it'>Tipo</div>
+							</div>
+							<div class="col s3 hide_for_1200px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_it' readonly />
+							</div>
+							<div class="col s12 m12 l12 xl9">
+								<input type="text" placeholder="" value="" class='lks' data-col='cdsc_it' readonly />
+							</div>
+						</div>
+					</section>
+					
+					<section class='ft_1' id="mdl_grid_it_sc_2">
+						<div class='row'>
+							<div class="col s12">
+								<div class='col_label'>Almacén</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" class='lks' data-col='ccod_alm' placeholder="" value="" readonly />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<input type="text" class='lks' data-col='cdsc_alm' placeholder="" value="" readonly />
+							</div>
+						</div>
+					</section>
+
+					<!-- <div class="modal-sub-content p-right-15 div_width_15px" data-col="scroll_div_mdl_grid_it_1" data-col_2="div_width_10px"> -->
+					<div class="modal-sub-content" data-col="scroll_div_mdl_grid_it_1" data-col_2="div_width_10px" style="overflow-x: hidden;">
+					
+
+						<div class="col s3 xl2 m-p-all-0">
+						
+						
+							<section>
+								<div class="row">
+									<div class="col s12">
+										<div class='col_label_head'>Tipo de Gráfico</div>
+									</div>
+								</div>
+								
+								<div class="row">
+							
+									<div class="col s12">
+										<p>
+										  <label>
+											<input name="group1" type="radio" checked />
+											<span>Circular</span>
+										  </label>
+										</p>
+										<p>
+										  <label>
+											<input name="group1" type="radio" />
+											<span>Barra Vertical</span>
+										  </label>
+										</p>
+										<p>
+										  <label>
+											<input class="with-gap" name="group1" type="radio"  />
+											<span>Barra Horizontal</span>
+										  </label>
+										</p>
+										<p>
+										  <label>
+											<input class="with-gap" name="group1" type="radio"  />
+											<span>Lineal</span>
+										  </label>
+										</p>
+										<p>
+										  <label>
+											<input class="with-gap" name="group1" type="radio"  />
+											<span>Areas</span>
+										  </label>
+										</p>
+									</div>
+								</div>
+								
+								
+							</section>
+				
+				
+						
+						</div>
+					
+						<div id='col_c_sync' class="col s9 xl10">
+			
+							<div class="row">
+								<div id="c_sync" class="col s12"></div>
+							</div>
+
+						</div>
+					
+					
+						<!--
+						<section class='ft_1'>
+							<div class="row">
+								<div class="col s12">
+									<div class='col_label_head'>Datos de la Venta</div>
+								</div>
+							</div>
+							<div class='row'>
+								<div class="col s3">
+									<div class='col_label'>Cantidad</div>
+									<input type="text" placeholder="" value="" class="lks text_align_right f_sin ft_cero_vacio" data-col='ncant' data-clear="n" data-hb_v="n" data-hb_n="s" data-hb_e="n" required />
+								</div>
+								<div class="col s4">
+									<div class='col_label'>U/M</div>
+									<select class="select2 s2" data-col='um' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="n" data-zi="mdl_grid_it" required></select>
+								</div>
+								<div class="col s3" id="frm_grid_it_c_nsaldo">
+									<div class='col_label'>Stock</div>
+									<input type="text" data-col='nsaldo' placeholder="" value="" class="lks text_align_right f_sin" readonly />
+								</div>
+							</div>
+							<div class='row'>
+								<div class="col s3">
+									<div class='col_label' data-col='label_precio'>Precio</div>
+									<input type="text" placeholder="" value="" class="lks text_align_right f_imp" data-col='nimp_u' data-clear="n" data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+								</div>
+								<div class="col s4">
+									<div class='col_label'>Moneda</div>
+									<input type="text" placeholder="" value="" class='lks' data-col='cdsc_mon' readonly />
+								</div>
+								<div class="col s5">
+									<div class='col_label'>Lista de Precio</div>
+									<select class="select2 s2" data-col='lp' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="n" data-zi="mdl_grid_it" required></select>
+								</div>
+							</div>
+						</section>
+						
+						<section class='ft_1'>
+							<div class='row'>
+								<div class="col s3">
+									<div class='col_label'>Sub Total</div>
+									<input type="text" placeholder="" value="" class="lks text_align_right f_imp" data-col='nimp_n' readonly />
+								</div>
+								<div class="col s3">
+									<div class='col_label' data-lnk='_lnk_open_modal_it_dsc' data-hb_v="s" data-hb_n="s" data-hb_e="s">Descuentos</div>
+									<input type="text" placeholder="" value="" class="lks text_align_right f_imp" data-col='nimp_d' readonly />
+								</div>
+								<div class="col s3">
+									<div class='col_label' data-lnk='_lnk_open_modal_it_imp' data-hb_v="s" data-hb_n="s" data-hb_e="s">Impuestos</div>
+									<input type="text" placeholder="" value="" class="lks text_align_right f_imp" data-col='nimp_i' readonly />
+								</div>
+								<div class="col s3">
+									<div class='col_label font_weight_bold'>Total</div>
+									<span class="input-csim left">
+										<input type="text" placeholder="" value="" class="lks text_align_right font_weight_bold f_imp" data-col='nimp_t' readonly />
+									</span>
+								</div>
+							</div>
+						</section>
+						
+						<section class='ft_1'>
+							<div class='row'>
+								<div class="col s12">
+									<div class='col_label'>Glosa</div>
+									<input type="text" placeholder="" value="" class='lks' data-col='cglosa' data-hb_v="n" data-hb_n="s" data-hb_e="n" />
+								</div>
+							</div>
+						</section>
+						-->
+						
+					</div>
+				
+				</div>
+			
+			</div>
+
+		</form>
+	</div>
+
+	<!--
+    <div class="modal-footer">
+        <button class="button-1 waves-effect" data-lnk='_lnk_grid_it_aceptar'>Agregar</button>
+        <button class="button-1 waves-effect modal-close">Cancelar</button>
+    </div>
+	-->
+	
+</div>
+
+
+
+@section scripts
+{
+<script type="text/javascript" src="../../scripts/lks/tbc_ve_prs.js"></script>
+}

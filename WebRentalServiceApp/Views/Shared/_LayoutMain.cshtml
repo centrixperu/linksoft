@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<!--<html lang="es" xml:lang="es">-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>SOFTWARE S7</title>
+    @*<link rel="icon" href="@Url.Content("~/Content/images/ap8.png")" />*@
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundlesbefore/lib")
+
+	<script type="text/javascript" src="../../scripts/lks/shortcut.js"></script>
+</head>
+
+<body class="frm_main overflow_hidden">
+	
+	<div id="contenedor_carga">
+		<div class="loader-four center">
+			<div class='dice'>
+				<div class="side one"></div>
+				<div class="side two"></div>
+				<div class="side three"></div>
+				<div class="side four"></div>
+				<div class="side five"></div>
+				<div class="side six"></div>
+			</div>
+		</div>
+	</div>
+
+	<ul id='slide-out' class='sidenav'>
+
+		<div class='lks-sidebar-header main'>
+			<div class='sidebar-image'>
+				<img src='../images/usuarios/ninguno_1.gif'>
+			</div>
+		</div>
+
+		<div class='mopciones_fixes' data-col='scroll_mn' data-col_2='div_width_-5px'>
+			
+			<div class="row m-top-70">
+				<div class="col s12">
+					<section>
+						<div class="row">
+							<div class="col s12">
+								<div class='col_label_head text_align_center name'></div>
+								<div class='col_label_head text_align_center email'></div>
+							</div>
+						</div>
+						
+						<div class="row m-top-30">
+							<div class="col s12 text_align_center">
+								<button class='button-1 st-3 button-color-brown-1 waves-effect waves-light' data-lnk='_lnk_usu_cambiar_password'>Cambiar contraseña</button>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col s12 text_align_center">
+								<button class='button-1 st-3 button-color-red-2 waves-effect waves-light' data-lnk='_lnk_usu_log_off__pre'>Cerrar sesión</button>
+							</div>
+						</div>
+
+					</section>
+				</div>
+			</div>
+		
+		</div>
+
+		<div class='lks-sidebar-footer'>
+			<div class='copyright'></div>
+			<div class='version'><b>Version: </b><span></span></div>
+		</div>
+	</ul>
+	
+    <div class="container">
+		<div class="row">
+			@RenderBody()
+		</div>
+    </div>
+
+    @Scripts.Render("~/bundlesafter/lib")
+    @RenderSection("scripts", required: false)
+    @RenderSection("Styles", false)
+
+	<script>fc__frm_layout__tipo = 'Main';</script>
+	<script type="text/javascript" src="../../scripts/lks/frm_layout.js"></script>
+
+</body>
+</html>

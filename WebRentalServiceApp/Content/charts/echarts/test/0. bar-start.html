@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+        <script src="lib/esl.js"></script>
+        <script src="lib/config.js"></script>
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/facePrint.js"></script>
+        <script src="lib/testHelper.js"></script>
+        <link rel="stylesheet" href="lib/reset.css" />
+		
+    </head>
+    <body>
+        <style>
+            .test-title {
+                background: #146402;
+                color: #fff;
+            }
+        </style>
+		
+
+
+        <div id="main0"></div>
+        
+
+
+        <script>
+
+            // See <https://github.com/ecomfe/echarts/issues/7412>
+            // Thanks to <https://github.com/CrazyShipOne>
+
+            var chart;
+            var myChart;
+            var option;
+
+            require([
+                'echarts'/*, 'map/js/china' */
+            ], function (echarts) {
+
+                option = {
+                    legend: {},
+                    xAxis: {
+						data: ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic']
+                        <!-- data: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'] -->
+                    },
+                    yAxis: [{
+                        min: 0 /*5000000*/
+                    }, {
+                    }],
+                    grid: {
+                        left: 100
+                    },
+                    series: [{
+                        name: 'bar',
+                        type: 'bar',
+                        data: [1500,4500,7800,654,1350,12000,8450,4512,7458,1540,7481,1200],
+                        animation: true
+                    }, {
+                        name: 'line',
+                        type: 'line',
+                        yAxisIndex: 1,
+						/* data: [1.1496899,0.9420012,0.6743367,0.47701207,0.67934614,0.37843546] */
+                        data: [1500,4500,7800,654,1350,12000,8450,4512,7458,1540,7481,1200]
+                    }]
+                };
+
+
+				<!-- chart = myChart = testHelper.create(echarts, 'main0', { -->
+                testHelper.create(echarts, 'main0', {
+                    title: 'bar start should be correct when two Y axes exists',
+                    option: option/*,
+                    info: option*/
+                });
+
+            });
+
+			$('.test-title').addClass('none');
+
+        </script>
+
+
+
+
+
+
+
+    </body>
+</html>

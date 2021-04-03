@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutBlank.cshtml";
+}
+<form id="form_main" onsubmit='return false;'>
+
+	<div id="tab_1" class="col s12 st_lks container_ft_1 height_-137px div_container" data-col="scroll_tab_1" data-col_2="div_width_-5px">
+
+		<div class='col s12 sub_container'>
+		
+			<div class="col s12 m12 l6 xl6">
+				<section>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label_head'>Bienvenido</div>
+							<button class='button-1 waves-effect' data-lnk='_lnk_add_' onclick='fnc_abrir_app_login();'>INGRESAR</button>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	
+	</div>
+
+</form>
+@section scripts
+{
+<script type="text/javascript" src="../../scripts/lks/Index.js"></script>
+}

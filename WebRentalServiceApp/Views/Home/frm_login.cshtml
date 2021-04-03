@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<!-- <div class="container"> -->
+	<!-- <div class="row"> -->
+		<!-- ACA VA EL RENDERBODY -->
+		
+		<!-- ======================================================================================================= -->
+		<!-- ======================================================================================================= -->
+		
+		<form id='form_main' onsubmit='return false;'>
+	
+			<div class="col s12 st-4 container_ft_1 height_-32px div_container overflow-y_hidden" data-col="scroll_panel_contenedor" data-col_2="div_width_-5px">
+			
+				<div class='col s12 sub_container full_height'>
+				
+					<div class="col s12 m12 l6 xl6 img-holder full_height hide_for_992px">
+						<div class="info-holder">
+							<img src='../../../images/fondos/login_1.svg' />
+						</div>
+					</div>
+
+					<div class="col s12 m12 l6 xl6 full_height contenedor_items_center" data-col="scroll_panel_2" data-col_2="div_width_-5px" style='background-color: #fff;'>
+						
+						<section style='width: 60%;'>
+
+							<div class="row">
+								<div class="col s12">
+									<div class='col_label_head'>Inicia sesión</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col s12">
+									<div class='col_label' data-col_dsc='cemail'>Correo electrónico</div>
+									<input type="text" class='lks' placeholder="micorreo@dominio.com" value="" data-col='cemail' data-hb_n="s" />
+								</div>
+							</div>
+							
+							<div class="row" style='margin-bottom: 0px;'>
+								<div class="col s12">
+									<div class='col_label' data-col_dsc='cpassword'>Contraseña</div>
+									<input type="text" class='lks' autocomplete="off" placeholder="Ingresa tu contraseña" value="" data-col='cpassword' data-hb_n="s" />
+								</div>
+								<div class="col s12 text_align_right">
+									<div class='col_label min_1' data-lnk='_lnk_olvidaste_password' data-hb_n="s">¿Olvidaste tu contraseña?</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col s12">
+									<div class='col_label'>
+										<label>
+											<input type='checkbox' class='filled-in checkbox-left' data-col='brecuerdame' data-hb_n='s' />
+											<span>Recuérdame</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col s12">
+									<button class='button-1 waves-effect width_100' data-lnk='_lnk_iniciar_sesion'>Iniciar sesión</button>
+								</div>
+							</div>
+
+						</section>
+
+
+						<!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+						
+
+					</div>
+
+				</div>
+			
+			</div>
+
+			
+		</form>
+
+		
+		<!-- ======================================================================================================= -->
+		<!-- ======================================================================================================= -->
+		
+	<!-- </div> -->
+<!-- </div> -->
+
+
+@section scripts
+{
+<script type="text/javascript" src="../../scripts/lks/frm_login.js"></script>
+}

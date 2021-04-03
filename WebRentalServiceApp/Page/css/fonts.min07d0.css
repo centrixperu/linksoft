@@ -1,0 +1,767 @@
+.lks_head_page_inner h1
+{
+	font-family: 'Charlie Text' !important;
+	font-size: 52px;
+	line-height: 1.2em;
+	font-weight: 700;
+	color: #FFFFFF !important;
+}
+
+.lks_head_page_inner p
+{
+	font-family: 'Charlie Text' !important;
+	font-size: 22px;
+	line-height: 1.5em;
+	font-weight: 400;
+	color: #FFFFFF !important;
+}
+
+
+
+
+.joinchat__button__open
+{
+	width: 60px;
+	height: 60px;
+	background: transparent url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E %3Cpath fill='%23fff' d='M3.516 3.516c4.686-4.686 12.284-4.686 16.97 0 4.686 4.686 4.686 12.283 0 16.97a12.004 12.004 0 01-13.754 2.299l-5.814.735a.392.392 0 01-.438-.44l.748-5.788A12.002 12.002 0 013.517 3.517zm3.61 17.043l.3.158a9.846 9.846 0 0011.534-1.758c3.843-3.843 3.843-10.074 0-13.918-3.843-3.843-10.075-3.843-13.918 0a9.846 9.846 0 00-1.747 11.554l.16.303-.51 3.942a.196.196 0 00.219.22l3.961-.501zm6.534-7.003l-.933 1.164a9.843 9.843 0 01-3.497-3.495l1.166-.933a.792.792 0 00.23-.94L9.561 6.96a.793.793 0 00-.924-.445 1291.6 1291.6 0 00-2.023.524.797.797 0 00-.588.88 11.754 11.754 0 0010.005 10.005.797.797 0 00.88-.587l.525-2.023a.793.793 0 00-.445-.923L14.6 13.327a.792.792 0 00-.94.23z'/%3E %3C/svg%3E") 50% no-repeat;
+	background-size: 60%;
+}
+.btn-whatsapp:hover
+{
+	/* background: #00e676; */
+	background: #00c853;
+}
+.btn-whatsapp
+{
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	/* position: absolute; */
+	z-index: 2;
+	bottom: 18px;
+	right: 18px;
+	height: 60px;
+	min-width: 60px;
+	max-width: 95vw;
+	background: #25d366;
+	color: inherit;
+	border-radius: 50%;
+	box-shadow: 1px 6px 24px 0 rgb(7 94 84 / 24%);
+	cursor: pointer;
+	transition: background .2s linear;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	will-change: background-color,width;
+}
+/*
+.btn-whatsapp {
+        display:block;
+        width:70px;
+        height:70px;
+        color#fff;
+        position: fixed;
+        right:20px;
+        bottom:20px;
+        border-radius:50%;
+        line-height:80px;
+        text-align:center;
+        z-index:999;
+}
+*/
+
+.et_pb_column_0
+{
+	padding-top: 0px !important;
+	padding-bottom: 60px !important;
+	
+	top: -20px;
+}
+
+.lks_header_main_img
+{
+	top: -70px;
+}
+
+
+/* ==================================== */
+.lks_imgs_val_sunat img.i1
+{
+
+	width: 40%;
+	height: 40%;
+	
+	/*
+	width: 200px;
+	height: 150px;
+	*/
+	
+	position: relative;
+	left: 20px;
+	top: -60px;
+}
+
+.lks_imgs_val_sunat img.i2
+{
+	/*
+	width: 180px;
+	height: 230px;
+	*/
+	
+	width: 35%;
+	height: 35%;
+	
+	position: relative;
+	left: 82px;
+	top: -60px;
+}
+/* ==================================== */
+
+.lks_imgs
+{
+	max-height: 355px;
+}
+
+.lks_imgs img.i1
+{
+	/*
+	width: 50%;
+	height: 50%;
+	*/
+	
+	width: 255px;
+	height: 355px;
+	
+	position: relative;
+	/* left: -20px; */
+	top: 30px;
+}
+
+.lks_imgs img.i2
+{
+	/*
+	width: 50%;
+	height: 50%;
+	*/
+	
+	width: 255px;
+	height: 355px;
+	
+	position: relative;
+	left: 15%;
+	top: -300px;
+}
+
+.lks_imgs img.i3
+{
+	/*
+	width: 50%;
+	height: 50%;
+	*/
+	
+	width: 255px;
+	height: 355px;
+	
+	position: relative;
+	left: 30%;
+	top: -710px;
+}
+
+.lks_imgs img.i4
+{
+	/*
+	width: 50%;
+	height: 50%;
+	*/
+	
+	width: 255px;
+	height: 355px;
+	
+	position: relative;
+	left: 50%;
+	top: -1025px;
+}
+
+
+
+.lks_box_shadow_none
+{
+	box-shadow: none !important;
+}
+
+.lks_box_shadow_1_0
+{
+	box-shadow: 0 0 0 1px rgba(53,72,91,.1),0 2.76726px 2.21381px rgba(0,0,0,.07),0 6.6501px 5.32008px rgba(0,0,0,.04317),0 12.5216px 10.0172px rgba(0,0,0,.0339075),0 22.3363px 17.869px rgba(0,0,0,.0282784),0 41.7776px 33.4221px rgba(0,0,0,.0235573),0 100px 80px rgba(0,0,0,.0174624) !important;
+}
+
+.lks_box_shadow_1
+{
+	box-shadow: 0 0 0 1px rgba(53,72,91,.1),0 2px 2px rgba(0,0,0,.0274351),0 4px 4px rgba(0,0,0,.0400741),0 10px 8px rgba(0,0,0,.0499982),0 15px 15px rgba(0,0,0,.0596004),0 30px 30px rgba(0,0,0,.0709366),0 70px 65px rgba(0,0,0,.09);
+	/* box-shadow: 0 0 0 1px rgb(53 72 91 / 10%), 0 2px 2px rgb(0 0 0 / 3%), 0 4px 4px rgb(0 0 0 / 4%), 0 10px 8px rgb(0 0 0 / 5%), 0 15px 15px rgb(0 0 0 / 6%), 0 30px 30px rgb(0 0 0 / 7%), 0 70px 65px rgb(0 0 0 / 9%); */
+	
+}
+
+.lks_box_shadow_2
+{
+	box-shadow: 0 0 60px rgb(14 42 71 / 25%);
+}
+
+.lks_box_shadow_3
+{
+	box-shadow: 0 8px 60px 0 rgb(103 151 255 / 11%), 0 12px 90px 0 rgb(103 151 255 / 11%);
+}
+
+
+/* box-shadow: 0 1px 50px rgb(153 153 153 / 35%) */
+/* box-shadow: 0 1rem 3rem rgba(13,20,49,.175)!important */
+
+
+body #page-container .et_pb_section .et_pb_pricing_tables_2 .et_pb_pricing_table_button.et_pb_button,
+body #page-container .et_pb_section .et_pb_pricing_tables_0 .et_pb_pricing_table_button.et_pb_button
+{
+	color: #ffffff !important;
+	background-color: #2970fa;
+	box-shadow: 0px 20px 30px 0px rgb(41 112 250 / 20%);
+}
+
+
+
+
+.et_pb_pricing li:not(.et_pb_not_available) span
+{
+	color: #000000;
+}
+
+@media only screen and (max-width: 980px) {
+	.et_pb_column.lks_plan
+	{
+		width: 50%;
+		margin-left: 25%;
+		margin-right: 25%;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.et_pb_column.lks_plan
+	{
+		width: 60%;
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.et_pb_column.lks_plan
+	{
+		width: 70%;
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.et_pb_column.lks_plan
+	{
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+
+@media only screen and (max-width: 430px) {
+	.et_pb_column.lks_plan
+	{
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+}
+
+
+
+@media only screen and (max-width: 1300px) {
+    .et_pb_row.lks_price {
+		width: 95%;
+	}
+}
+
+
+
+
+
+
+
+.et_pb_cta_0.et_pb_promo .et_pb_promo_description div,
+.et_pb_cta_1.et_pb_promo .et_pb_promo_description div,
+.et_pb_cta_2.et_pb_promo .et_pb_promo_description div,
+.et_pb_cta_3.et_pb_promo .et_pb_promo_description div
+{
+	line-height: 24px;
+	font-family: 'Charlie Text';
+	font-size: 1rem;
+	font-weight: 400;
+	
+	/* color: #091E42; */
+	/* color: #3A4A67; */
+	color: #000000;
+}
+
+body #page-container .et_pb_section .et_pb_cta_0.et_pb_promo .et_pb_promo_button.et_pb_button,
+body #page-container .et_pb_section .et_pb_cta_1.et_pb_promo .et_pb_promo_button.et_pb_button,
+body #page-container .et_pb_section .et_pb_cta_2.et_pb_promo .et_pb_promo_button.et_pb_button,
+body #page-container .et_pb_section .et_pb_cta_3.et_pb_promo .et_pb_promo_button.et_pb_button
+{
+	font-family: 'Segoe UI' !important;
+	font-size: 14px;
+	color: #0052CC !important;
+	
+	text-transform: none !important;
+	font-weight: normal;
+	
+	padding-left: 0 !important;
+}
+
+body #page-container .et_pb_section .et_pb_cta_0.et_pb_promo .et_pb_promo_button.et_pb_button:hover,
+body #page-container .et_pb_section .et_pb_cta_1.et_pb_promo .et_pb_promo_button.et_pb_button:hover,
+body #page-container .et_pb_section .et_pb_cta_2.et_pb_promo .et_pb_promo_button.et_pb_button:hover,
+body #page-container .et_pb_section .et_pb_cta_3.et_pb_promo .et_pb_promo_button.et_pb_button:hover
+{
+	text-decoration: underline;
+}
+
+body #page-container .et_pb_section .et_pb_cta_1.et_pb_promo .et_pb_promo_button.et_pb_button svg
+{
+	margin-left: 5px;
+}
+
+.et_pb_custom_button_icon.et_pb_button:after, .et_pb_login .et_pb_custom_button_icon.et_pb_button:after
+{
+	content: none;
+}
+
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Black.woff2) format("woff2"), url(../fonts/Charlie_Display-Black.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Bold.woff2) format("woff2"), url(../fonts/Charlie_Display-Bold.woff) format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Light.woff2) format("woff2"), url(../fonts/Charlie_Display-Light.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Regular.woff2) format("woff2"), url(../fonts/Charlie_Display-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Semibold.woff2) format("woff2"), url(../fonts/Charlie_Display-Semibold.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Thin.woff2) format("woff2"), url(../fonts/Charlie_Display-Thin.woff) format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Ultra.woff2) format("woff2"), url(../fonts/Charlie_Display-Ultra.woff) format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Black_Italic.woff2) format("woff2"), url(../fonts/Charlie_Display-Black_Italic.woff) format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Bold_Italic.woff2) format("woff2"), url(../fonts/Charlie_Display-Bold_Italic.woff) format("woff");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Italic.woff2) format("woff2"), url(../fonts/Charlie_Display-Italic.woff) format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Light_Italic.woff2) format("woff2"), url(../fonts/Charlie_Display-Light_Italic.woff) format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Semibold_Italic.woff2) format("woff2"), url(../fonts/Charlie_Display-Semibold_Italic.woff) format("woff");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Thin_Italic.woff2) format("woff2"), url(../fonts/Charlie_Display-Thin_Italic.woff) format("woff");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Ultra_Italic.woff2) format("woff2"), url(../fonts/Charlie_Display-Ultra_Italic.woff) format("woff");
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Black.woff2) format("woff2"), url(../fonts/Charlie_Text-Black.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Black_Italic.woff2) format("woff2"), url(../fonts/Charlie_Text-Black_Italic.woff) format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Bold.woff2) format("woff2"), url(../fonts/Charlie_Text-Bold.woff) format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Bold_Italic.woff2) format("woff2"), url(../fonts/Charlie_Text-Bold_Italic.woff) format("woff");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Italic.woff2) format("woff2"), url(../fonts/Charlie_Text-Italic.woff) format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Light.woff2) format("woff2"), url(../fonts/Charlie_Text-Light.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Light_Italic.woff2) format("woff2"), url(../fonts/Charlie_Text-Light_Italic.woff) format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Regular.woff2) format("woff2"), url(../fonts/Charlie_Text-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Semibold.woff2) format("woff2"), url(../fonts/Charlie_Text-Semibold.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Semibold_Italic.woff2) format("woff2"), url(../fonts/Charlie_Text-Semibold_Italic.woff) format("woff");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Thin.woff2) format("woff2"), url(../fonts/Charlie_Text-Thin.woff) format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Thin_Italic.woff2) format("woff2"), url(../fonts/Charlie_Text-Thin_Italic.woff) format("woff");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Black.woff2) format("woff2"), url(../fonts/Charlie_Display-Black.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Bold.woff2) format("woff2"), url(../fonts/Charlie_Display-Bold.woff) format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Light.woff2) format("woff2"), url(../fonts/Charlie_Display-Light.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Regular.woff2) format("woff2"), url(../fonts/Charlie_Display-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Semibold.woff2) format("woff2"), url(../fonts/Charlie_Display-Semibold.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Thin.woff2) format("woff2"), url(../fonts/Charlie_Display-Thin.woff) format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Ultra.woff2) format("woff2"), url(../fonts/Charlie_Display-Ultra.woff) format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Black_Italic.woff2) format("woff2"), url(../fonts/Charlie_Display-Black_Italic.woff) format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Bold_Italic.woff2) format("woff2"), url(../fonts/Charlie_Display-Bold_Italic.woff) format("woff");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Italic.woff2) format("woff2"), url(../fonts/Charlie_Display-Italic.woff) format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Light_Italic.woff2) format("woff2"), url(../fonts/Charlie_Display-Light_Italic.woff) format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Semibold_Italic.woff2) format("woff2"), url(../fonts/Charlie_Display-Semibold_Italic.woff) format("woff");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Thin_Italic.woff2) format("woff2"), url(../fonts/Charlie_Display-Thin_Italic.woff) format("woff");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Display';
+    src: url(../fonts/Charlie_Display-Ultra_Italic.woff2) format("woff2"), url(../fonts/Charlie_Display-Ultra_Italic.woff) format("woff");
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Black.woff2) format("woff2"), url(../fonts/Charlie_Text-Black.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Black_Italic.woff2) format("woff2"), url(../fonts/Charlie_Text-Black_Italic.woff) format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Bold.woff2) format("woff2"), url(../fonts/Charlie_Text-Bold.woff) format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Bold_Italic.woff2) format("woff2"), url(../fonts/Charlie_Text-Bold_Italic.woff) format("woff");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Italic.woff2) format("woff2"), url(../fonts/Charlie_Text-Italic.woff) format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Light.woff2) format("woff2"), url(../fonts/Charlie_Text-Light.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Light_Italic.woff2) format("woff2"), url(../fonts/Charlie_Text-Light_Italic.woff) format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Regular.woff2) format("woff2"), url(../fonts/Charlie_Text-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Semibold.woff2) format("woff2"), url(../fonts/Charlie_Text-Semibold.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Semibold_Italic.woff2) format("woff2"), url(../fonts/Charlie_Text-Semibold_Italic.woff) format("woff");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Thin.woff2) format("woff2"), url(../fonts/Charlie_Text-Thin.woff) format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: 'Charlie Text';
+    src: url(../fonts/Charlie_Text-Thin_Italic.woff2) format("woff2"), url(../fonts/Charlie_Text-Thin_Italic.woff) format("woff");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: Circular;
+    src: url(../fonts/lineto-circular-book-c.eot);
+    src: url(../fonts/lineto-circular-book-c.eot?#iefix) format("embedded-opentype"), url(../fonts/lineto-circular-book-c.woff) format("woff"), url(../fonts/lineto-circular-book-c.ttf) format("truetype"), url(../fonts/lineto-circular-book-c.svg#Circular-Book) format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: Circular;
+    src: url(../fonts/lineto-circular-medium-c.eot);
+    src: url(../fonts/lineto-circular-medium-c.eot?#iefix) format("embedded-opentype"), url(../fonts/lineto-circular-medium-c.woff) format("woff"), url(../fonts/lineto-circular-medium-c.ttf) format("truetype"), url(../fonts/lineto-circular-medium-c.svg#Circular-Medium) format("svg");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: Circular;
+    src: url(../fonts/lineto-circular-bold-c.eot);
+    src: url(../fonts/lineto-circular-bold-c.eot?#iefix) format("embedded-opentype"), url(../fonts/lineto-circular-bold-c.woff) format("woff"), url(../fonts/lineto-circular-bold-c.ttf) format("truetype"), url(../fonts/lineto-circular-bold-c.svg#Circular-Bold) format("svg");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: Circular;
+    src: url(../fonts/lineto-circular-black-c.eot);
+    src: url(../fonts/lineto-circular-black-c.eot?#iefix) format("embedded-opentype"), url(../fonts/lineto-circular-black-c.woff) format("woff"), url(../fonts/lineto-circular-black-c.ttf) format("truetype"), url(../fonts/lineto-circular-black-c.svg#Circular-Black) format("svg");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: Circular;
+    src: url(../fonts/lineto-circular-bookitalic-c.eot);
+    src: url(../fonts/lineto-circular-bookitalic-c.eot?#iefix) format("embedded-opentype"), url(../fonts/lineto-circular-bookitalic-c.woff) format("woff"), url(../fonts/lineto-circular-bookitalic-c.ttf) format("truetype"), url(../fonts/lineto-circular-bookitalic-c.svg#Circular-Bookitalic) format("svg");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: Circular;
+    src: url(../fonts/lineto-circular-mediumitalic-c.eot);
+    src: url(../fonts/lineto-circular-mediumitalic-c.eot?#iefix) format("embedded-opentype"), url(../fonts/lineto-circular-mediumitalic-c.woff) format("woff"), url(../fonts/lineto-circular-mediumitalic-c.ttf) format("truetype"), url(../fonts/lineto-circular-mediumitalic-c.svg#Circular-Mediumitalic) format("svg");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: Circular;
+    src: url(../fonts/lineto-circular-bolditalic-c.eot);
+    src: url(../fonts/lineto-circular-bolditalic-c.eot?#iefix) format("embedded-opentype"), url(../fonts/lineto-circular-bolditalic-c.woff) format("woff"), url(../fonts/lineto-circular-bolditalic-c.ttf) format("truetype"), url(../fonts/lineto-circular-bolditalic-c.svg#Circular-Bolditalic) format("svg");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap
+}
+@font-face {
+    font-family: Circular;
+    src: url(../fonts/lineto-circular-blackitalic-c.eot);
+    src: url(../fonts/lineto-circular-blackitalic-c.eot?#iefix) format("embedded-opentype"), url(../fonts/lineto-circular-blackitalic-c.woff) format("woff"), url(../fonts/lineto-circular-blackitalic-c.ttf) format("truetype"), url(../fonts/lineto-circular-blackitalic-c.svg#Circular-Blackitalic) format("svg");
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap
+}

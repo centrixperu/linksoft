@@ -1,0 +1,366 @@
+﻿@{
+    ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_LayoutChart.cshtml";
+}
+
+
+
+
+<div class="row">
+
+
+	<form id="form_main">
+		
+		
+		
+		
+		<div id='tab_contenedor1212' class="col s12 st_lks container_ft_1" style="position: initial;">
+		<!-- <div id='tab_contenedor' class="col s12 st_lks container_ft_1 height_-83px div_container" data-col="scroll_tab_contenedor" data-col_2="div_width_-5px"> -->
+		<!-- <div id='tab_contenedor' class="col s12 st_lks container_ft_1 height_-83px div_container overflow-y_hidden" data-col="scroll_tab_contenedor" data-col_2="div_width_-5px"> -->
+
+			<div class='col s12 sub_container'>
+			<!-- <div class='col s12 sub_container full_height'> -->
+
+				
+				<div class="col s12">
+				
+					<section>
+					
+						<div class='row'>
+							<div class="col s4">
+								<div class='col_label'>Ejercicio</div>
+								<select class="select2 s2" data-col='easdmp' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s"></select>
+							</div>
+							<div class="col s4">
+								<div class='col_label'>Moneda</div>
+								<select class="select2 s2" data-col='easdm1p' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s"></select>
+							</div>
+						</div>
+
+
+					</section>
+					
+							
+					
+					
+					
+				</div>
+
+
+
+				
+
+			</div>
+		
+		</div>		
+		
+
+	</form>
+
+</div>
+
+<div style='padding: 0 15px;'>
+
+	<div class="row ft_tab_2 shadow-01" style="position: initial;">
+	<!-- <div class="row shadow-01"> -->
+
+		<!-- <div class="col s12"> -->
+			<ul id="tab_main" class="tabs">
+				<li class="tab"><a href="#tab_1" class='waves-effect waves-light'>Artículo</a></li>
+				<li class="tab"><a href="#tab_2" class='waves-effect waves-light'>Cliente</a></li>
+				<li class="tab"><a href="#tab_3" class='waves-effect waves-light'>Vendedor</a></li>
+				<li class="tab"><a href="#tab_4" class='waves-effect waves-light'>Zona</a></li>
+				<li class="tab"><a href="#tab_5" class='waves-effect waves-light'>Línea</a></li>
+				
+			</ul>
+		<!-- </div> -->
+	</div>
+
+</div>		
+
+
+
+
+
+
+<!-- ================================================================================================ -->
+<!-- ================================================================================================ -->
+<!-- ================================================================================================ -->
+
+
+
+<div class="row">
+
+
+
+	<div id="tab_1" class="col s12 st_lks container_ft_1 height_-129px" data-col="scroll_tab_lista" data-col_2="div_width_-5px">
+
+		<div class="col s12 sub_container full_height">
+
+			<div class="col s12 container_table footer_fixed">
+
+				<section class='ft_1'>
+					<div class="row">
+						<div class="col s4 m4 l3 xl2 hide_for_600px" data-col='c_s_grid_lista_filtros'>
+							<div class='col_label'>Filtrar por</div>
+						</div>
+						<div class="col s9 m6 l4 xl4">
+							<div class='col_label'>Valor</div>
+							<input class='lks' placeholder="Digite valor a buscar" value="" type="text" data-col="i_filter_grid_lista" />
+						</div>
+						<div class="col s3 m2 l5 xl6">
+							<div class='col_label'> </div>
+							<div data-col="c_length_grid_lista"></div>
+						</div>
+					</div>
+				</section>
+				
+				<div class="content_table" data-col='scroll_grid_lista' data-col_2="p-right-15">
+					<div class="row">
+						<div class="c_col col s12" data-col="c_grid_lista"></div>
+					</div>
+				</div>
+
+				<div class="dataTables_wrapper" data-col="c_footer_grid_lista"></div>
+				
+			</div>
+
+		</div>
+		
+		
+		
+		
+		
+		<!-- ===================================================================== -->
+		<!-- ===================================================================== -->
+		
+		<div class="col s12">
+				
+			<!-- <div class="chart" id="sync"></div> -->
+
+		</div>
+		
+		<!-- ===================================================================== -->
+		<!-- ===================================================================== -->
+		
+		
+
+	</div>
+
+
+
+	<form id="form_main">
+		
+		
+		
+		
+		<div id='tab_2' class="col s12 st_lks container_ft_1" style="position: initial;">
+		<!-- <div id='tab_contenedor' class="col s12 st_lks container_ft_1 height_-83px div_container" data-col="scroll_tab_contenedor" data-col_2="div_width_-5px"> -->
+		<!-- <div id='tab_contenedor' class="col s12 st_lks container_ft_1 height_-83px div_container overflow-y_hidden" data-col="scroll_tab_contenedor" data-col_2="div_width_-5px"> -->
+
+			<div class='col s12 sub_container'>
+			<!-- <div class='col s12 sub_container full_height'> -->
+
+
+
+				
+				<div class="col s12 m12 l6 xl6">
+				
+					<div class="chart" id="sync"></div>
+
+				</div>
+
+
+				<div class="col s12 m12 l6 xl6">
+				<!-- <div class="col s12 m12 l6 xl6 full_height" data-col="scroll_panel_2" data-col_2="div_width_-5px"> -->
+				
+					<section>
+
+						<div class="row">
+							<div class="col s12">
+								<div class='col_label_head'>Datos generales</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="c_col col s12">
+								<div class="col s12">
+									<div class='col_label' data-col_dsc='tip_prod'>Usuario</div>
+								</div>
+								<div class="col s2 hide_for_600px">
+									<input type="text" placeholder="" value="" class='lks' data-col='ccod_usu' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+								</div>
+								<div class="col s12 m10 l10 xl10">
+									<input type="text" placeholder="" value="" class='lks' data-col='cdsc_usu' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="row">
+							<div class="c_col col s12">
+								<div class="col s12">
+									<div class='col_label' data-col_dsc='emp'>Empresa</div>
+								</div>
+								<div class="col s2 hide_for_600px">
+									<input type="text" placeholder="" value="" class='lks' data-col='ccod_emp' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+								</div>
+								<div class="col s12 m10 l10 xl10">
+									<select class="select2 s2" data-col='emp' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="c_col col s12">
+								<div class="col s12">
+									<div class='col_label' data-col_dsc='uop'>Unidad Operativa</div>
+								</div>
+								<div class="col s2 hide_for_600px">
+									<input type="text" placeholder="" value="" class='lks' data-col='ccod_u1op' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+								</div>
+								<div class="col s12 m10 l10 xl10">
+									<select class="select2 s2" data-col='u1op' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select>
+								</div>
+							</div>
+						</div>
+						
+						
+						
+						<div class="row">
+							<div class="col s4">
+								<div class='col_label'>Fecha</div>
+								<input type="text" autocomplete="off" placeholder="" value="" class='lks' data-col='dfch' data-dsc='Fecha' data-clear="n" data-hb_v="n" data-hb_n="s" data-hb_e="n" required />
+							</div>
+							<!--
+							<div class="col s4">
+								<div class='col_label'>Vencimiento</div>
+								<input type="text" autocomplete="off" placeholder="" value="" class='lks' data-col='dfch_venc' data-dsc='Fecha de Vencimiento' data-hb_v="n" data-hb_n="s" data-hb_e="s" required />
+							</div>
+							<div class="col s4">
+								<div class='col_label' data-lnk="_lnk_open_modal_tpc" data-hb_v="s" data-hb_n="s" data-hb_e="s">Moneda</div>
+								<input type="text" placeholder="" value="" class='lks' data-col='cdsc_mon' readonly />
+							</div>
+							-->
+						</div>
+
+					</section>
+					
+					
+					
+					<section>
+					
+						<div class="row">
+							<div class="col s12">
+								<div class='col_label_head'>Aplicaciones disponibles</div>
+							</div>
+						</div>
+
+					</section>
+				
+					
+				
+
+
+				</div>
+
+
+
+
+				
+
+			</div>
+		
+		</div>
+
+
+		<div id='tab_3'>
+		
+		
+		
+		</div>
+
+		
+
+	</form>
+
+</div>
+
+
+<!-- ================================================================================================ -->
+<!-- ================================================================================================ -->
+<!-- ================================================================================================ -->
+
+
+
+
+
+<!--
+<div class="row">
+	<form id="form_main">
+		
+		<div id="tab_1" class="col s12 st_lks container_ft_1 height_-83px div_container" data-col="scroll_tab_1" data-col_2="div_width_-5px">
+
+			<div class='col s12 sub_container'>
+			
+				<div class="col s12 m12 l6 xl6">
+
+					<div class='fixed_ft_1' style='position: initial !important;'>
+						
+						<section class='ft_top_vw'>
+							
+							<div class="row m-p-all-0">
+							
+								<div class="" style="width: 100px; float: left; text-align: center;">
+									<div class="nav-mosaico" style="">
+										<div class="nav-mosaico-content-item-image img_alm_2" style="margin-top: 4px;"></div>
+									</div>
+								</div>
+								
+								<div class="" style="width: calc(100% - 100px) !important; float: left; padding-left: 5px; padding-right: 0px; padding-top: 9px; padding-bottom: 0px;">
+									<div class='row' style="padding-bottom: 3px;">
+
+										<div class="col s12" style="margin-bottom: 2px;">
+											<div style="font-size: 20px; font-weight: bold; width: 100%;" class="my_elipsis">Modulo de Almacen</div>
+										</div>
+										
+										<div class="col s12" style="margin-bottom: 4px;">
+											<div>Unidad</div>
+										</div>
+										
+										<div class="col s12">
+											<div>Saldo: <span style="font-weight: bold;">120 Unidades</span> </div>
+										</div>
+
+									</div>
+								</div>
+								
+							</div>
+						
+						</section>
+						
+					</div>
+
+					
+				</div>
+
+				<div class="col s12 m12 l6 xl6">
+				
+
+				</div>
+
+			</div>
+		
+		</div>
+
+	</form>
+
+</div>
+-->
+@section scripts
+{
+
+
+
+<script type="text/javascript" src="../../scripts/lks/tbc_ve_prs.js"></script>
+}

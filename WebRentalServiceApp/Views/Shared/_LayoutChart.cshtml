@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html>
+<html>
+<!--<html lang="es" xml:lang="es">-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>SOFTWARE S7</title>
+    @*<link rel="icon" href="@Url.Content("~/Content/images/ap8.png")" />*@
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundlesbefore/lib")
+
+	<script type="text/javascript" src="../../scripts/lks/shortcut.js"></script>
+</head>
+
+<body class="form_trasaccion c_ft_tab_2 overflow_hidden">
+<!-- <body class="frm_main overflow_hidden"> -->
+
+	<div id="contenedor_carga">
+		<div class="loader-four center">
+			<div class='dice'>
+				<div class="side one"></div>
+				<div class="side two"></div>
+				<div class="side three"></div>
+				<div class="side four"></div>
+				<div class="side five"></div>
+				<div class="side six"></div>
+			</div>
+		</div>
+	</div>
+
+	
+    <div class="container">
+	
+	
+		<!-- <div class="row ft_tab_1 ft_tab_master_fixed shadow-01"> -->
+		<div class="row ft_tab_2 ft_tab_master_fixed">
+			<ul id="tab_main" class="tabs">
+				<li class="tab"><a href="#tab_1" class='waves-effect waves-light'>Tab 1</a></li>
+				<li class="tab"><a href="#tab_2" class='waves-effect waves-light'>Tab 2</a></li>
+				<li class="tab"><a href="#tab_3" class='waves-effect waves-light'>Tab 3</a></li>
+				<li class="tab"><a href="#tab_4" class='waves-effect waves-light'>Tab 4</a></li>
+				<li class="tab"><a href="#tab_5" class='waves-effect waves-light'>Tab 5</a></li>
+				<li class="tab"><a href="#tab_6" class='waves-effect waves-light'>Tab 6</a></li>
+				<li class="tab"><a href="#tab_7" class='waves-effect waves-light'>Tab 7</a></li>
+				<li class="tab"><a href="#tab_8" class='waves-effect waves-light'>Tab 8</a></li>
+				<li class="tab"><a href="#tab_9" class='waves-effect waves-light'>Tab 9</a></li>
+				<li class="tab"><a href="#tab_10" class='waves-effect waves-light'>Tab 10</a></li>
+				<li class="tab"><a href="#tab_lista" class='waves-effect waves-light'>Lista</a></li>
+			</ul>
+		</div>
+	
+		<div class="row">
+			@RenderBody()
+		</div>
+
+    </div>
+
+    @Scripts.Render("~/bundlesafter/lib")
+    @RenderSection("scripts", required: false)
+    @RenderSection("Styles", false)
+
+	<script src="/Content/charts/echarts/test/lib/esl.js"></script>
+	<script src="/Content/charts/echarts/test/lib/config.js"></script>
+	<script src="/Content/charts/echarts/test/lib/facePrint.js"></script>
+	<script src="/Content/charts/echarts/test/lib/testHelper.js"></script>
+	<link rel="stylesheet" href="/Content/charts/echarts/test/lib/reset.css">
+	
+	
+	
+	
+	
+	<script>fc__frm_layout__tipo = 'Main_tbc';</script>
+	<script type="text/javascript" src="../../scripts/lks/frm_layout.js"></script>
+
+
+
+
+	<script>
+
+	var pa_x_columnas = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+	var pa_x_valores = [1000,2000,3000,4400,5000,7800,1200,5400,4875,5500,7410,4500];
+
+	// Area
+	require(['echarts'], function (echarts) {
+		var graphic = echarts.graphic;
+
+		var chart = echarts.init(document.getElementById('gf_area'), null, {
+
+		});
+
+		var itemStyle = {
+			normal: {
+				// borderColor: 'white',
+				// borderWidth: 3,
+				// shadowBlur: 10,
+				// shadowOffsetX: 0,
+				// shadowOffsetY: 5,
+				// shadowColor: 'rgba(0, 0, 0, 0.4)',
+				lineStyle: {
+					width: 1
+					// shadowBlur: 10,
+					// shadowOffsetX: 0,
+					// shadowOffsetY: 5,
+					// shadowColor: 'rgba(0, 0, 0, 0.4)'
+				},
+				areaStyle: {
+				}
+			}
+		};
+
+		chart.setOption({
+			/*
+			legend: {
+				data: ['line']
+			},
+			*/
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: {
+					type: 'line'
+				}
+			},
+			xAxis: {
+				data: pa_x_columnas,
+				boundaryGap: false,
+				// inverse: true,
+				splitArea: {
+					show: true
+				}
+			},
+			yAxis: {
+				boundaryGap: [0, 0],
+				splitLine: {
+					show: true
+				}
+			},
+			series: [{
+				name: 'Importe',
+				type: 'line',
+				stack: 'all',
+				symbolSize: 10,
+				data: pa_x_valores,
+				itemStyle: itemStyle,
+				smooth: true
+			}
+			]
+		});
+		
+		window.onresize = chart.resize;
+	});
+
+
+	// Barra Vertical
+	require(['echarts'], function (echarts) {
+
+			var chart = echarts.init(document.getElementById('gf_barra_vertical'));
+
+			var itemStyle = {
+				normal: {
+					barBorderRadius: 5,
+					label: {
+						show: true,
+						position: 'outside'
+					}
+				},
+				emphasis: {
+					label: {
+						position: 'outside'
+					},
+					barBorderColor: '#FFFFFF',
+					barBorderWidth: 1,
+					shadowBlur: 10,
+					shadowOffsetX: 0,
+					shadowOffsetY: 0,
+					shadowColor: 'rgba(0,0,0,0.5)'
+				}
+			};
+
+			chart.setOption({
+				backgroundColor: '#FFF',
+				animationDurationUpdate: 1000,
+				tooltip: {},
+				grid: {
+					top: 50
+				},
+				xAxis: {
+					data: pa_x_columnas,
+					name: '',
+					silent: false,
+					axisTick: {
+						alignWithLabel: true
+					},
+					axisLine: {
+						onZero: true
+					},
+					splitLine: {
+						show: true
+					},
+					splitArea: {
+						show: true
+					}
+				},
+				yAxis: {
+					inverse: false,
+					axisTick: {
+						show: false
+					},
+					splitArea: {
+						show: true
+					}
+				},
+				series: [{
+					name: 'Barra',
+					type: 'bar',
+					stack: 'one',
+					itemStyle: itemStyle,
+					cursor: '',
+					
+					lineStyle: {
+						normal: {
+							width: 2,
+							shadowColor: 'rgba(0,0,0,0.4)',
+							shadowBlur: 10,
+							shadowOffsetY: 10
+						}
+					},
+					
+					data: pa_x_valores
+				}]
+			});
+
+			window.onresize = chart.resize;
+		}
+	);
+	
+	
+	// Grafico Circular
+	require(['echarts'], function (echarts) {
+
+		var chart = echarts.init(document.getElementById('gf_circular'), null, {
+
+		});
+
+		var itemStyle = {
+			normal: {
+				// shadowBlur: 10,
+				// shadowOffsetX: 0,
+				// shadowOffsetY: 5,
+				// shadowColor: 'rgba(0, 0, 0, 0.4)'
+			}
+		};
+
+		chart.setOption({
+			legend: {
+				data: pa_x_columnas
+			},
+			tooltip: {
+
+			},
+			series: [{
+				name: 'pie',
+				type: 'pie',
+				stack: 'all',
+				symbol: 'circle',
+				symbolSize: 10,
+				selectedMode: 'single',
+				selectedOffset: 20,
+				roseType: true,
+				data:[
+					{value:'335', name:'Enero'},
+					{value:'310', name:'Febrero'},
+					{value:'234', name:'Marzo'},
+					{value:'135', name:'Abril'},
+					{value:'120', name:'Mayo'},
+					{value:'335', name:'Junio'},
+					{value:'310', name:'Julio'},
+					{value:'234', name:'Agosto'},
+					{value:'120', name:'Septiembre'},
+					{value:'100', name:'Octubre'},											
+					{value:'150', name:'Noviembre'},
+					{value:'350', name:'Diciembre'}
+				],
+				itemStyle: itemStyle
+			}]
+		});
+	})
+
+	// Barra Horizontal
+	require(
+		(['echarts']),
+		function (echarts) {
+
+			var chart = echarts.init(document.getElementById('gf_barra_horizontal'));
+
+			chart.setOption({
+
+				tooltip : {
+					trigger: 'axis',
+					axisPointer : {
+						type : 'shadow' // 'line' | 'shadow'
+					}
+				},
+
+				grid: {
+					left: '3%',
+					right: '4%',
+					bottom: '3%',
+					containLabel: true
+				},
+				xAxis : [
+					{
+						type : 'value'
+					}
+				],
+				yAxis : [
+					{
+						type : 'category',
+						axisTick : {show: false},
+						data : ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio']
+					}
+				],
+				series : [
+					{
+						name:'Importe',
+						type:'bar',
+						label: {
+							normal: {
+								show: true,
+								position: 'inside'
+							}
+						},
+						data:[300, 270, 340, 344, 300, 320, 310]
+					}
+				]
+			});
+
+			window.onresize = chart.resize;
+		}
+	);
+	
+	</script>
+
+
+
+
+</body>
+</html>

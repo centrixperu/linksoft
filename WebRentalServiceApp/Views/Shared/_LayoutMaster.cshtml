@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<!--<html lang="es" xml:lang="es">-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>SOFTWARE S7</title>
+    @*<link rel="icon" href="@Url.Content("~/Content/images/ap8.png")" />*@
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundlesbefore/lib")
+
+	<script type="text/javascript" src="../../scripts/lks/shortcut.js"></script>
+</head>
+
+<body class="form_trasaccion overflow_hidden">
+
+	<div id="contenedor_carga">
+		<div class="loader-four center">
+			<div class='dice'>
+				<div class="side one"></div>
+				<div class="side two"></div>
+				<div class="side three"></div>
+				<div class="side four"></div>
+				<div class="side five"></div>
+				<div class="side six"></div>
+			</div>
+		</div>
+	</div>
+	<!-- <div id="contenedor_carga"><div class="js-loading-indicator triple"></div></div> -->
+
+    <div class="container">
+	
+		<div class="row ft_tab_1 ft_tab_master_fixed shadow-01">
+			<ul id="tab_main" class="tabs">
+				<li class="tab"><a href="#tab_1" class='waves-effect waves-light'>Tab 1</a></li>
+				<li class="tab"><a href="#tab_2" class='waves-effect waves-light'>Tab 2</a></li>
+				<li class="tab"><a href="#tab_3" class='waves-effect waves-light'>Tab 3</a></li>
+				<li class="tab"><a href="#tab_4" class='waves-effect waves-light'>Tab 4</a></li>
+				<li class="tab"><a href="#tab_5" class='waves-effect waves-light'>Tab 5</a></li>
+				<li class="tab"><a href="#tab_6" class='waves-effect waves-light'>Tab 6</a></li>
+				<li class="tab"><a href="#tab_7" class='waves-effect waves-light'>Tab 7</a></li>
+				<li class="tab"><a href="#tab_8" class='waves-effect waves-light'>Tab 8</a></li>
+				<li class="tab"><a href="#tab_9" class='waves-effect waves-light'>Tab 9</a></li>
+				<li class="tab"><a href="#tab_10" class='waves-effect waves-light'>Tab 10</a></li>
+				<li class="tab"><a href="#tab_lista" class='waves-effect waves-light'>Lista</a></li>
+			</ul>
+		</div>
+		
+		<div class="row">
+
+			<div id="tab_lista" class="col s12 st_lks container_ft_1 height_-129px" data-col="scroll_tab_lista" data-col_2="div_width_-5px">
+
+				<div class="col s12 sub_container full_height">
+
+					<div class="col s12 container_table footer_fixed">
+
+						<section class='ft_1'>
+							<div class="row">
+								<div class="col s4 m4 l3 xl2 hide_for_600px" data-col='c_s_grid_lista_filtros'>
+									<div class='col_label'>Filtrar por</div>
+								</div>
+								<div class="col s9 m6 l4 xl4">
+									<div class='col_label'>Valor</div>
+									<input class='lks' placeholder="Digite valor a buscar" value="" type="text" data-col="i_filter_grid_lista" />
+								</div>
+								<div class="col s3 m2 l5 xl6">
+									<div class='col_label'> </div>
+									<div data-col="c_length_grid_lista"></div>
+								</div>
+							</div>
+						</section>
+						
+						<div class="content_table" data-col='scroll_grid_lista' data-col_2="p-right-15">
+							<div class="row">
+								<div class="c_col col s12" data-col="c_grid_lista"></div>
+							</div>
+						</div>
+
+						<div class="dataTables_wrapper" data-col="c_footer_grid_lista"></div>
+						
+					</div>
+
+				</div>
+
+			</div>
+
+			@RenderBody()
+
+		</div>
+    </div>
+
+    @Scripts.Render("~/bundlesafter/lib")
+    @RenderSection("scripts", required: false)
+    @RenderSection("Styles", false)
+
+	<script>fc__frm_layout__tipo = 'Master';</script>
+	<script type="text/javascript" src="../../scripts/lks/frm_layout.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+<form id="form_main">
+	
+	<div id='tab_contenedor' class="col s12 st_lks container_ft_1 height_-83px div_container" data-col="scroll_tab_contenedor" data-col_2="div_width_-5px">
+	<!-- <div id='tab_contenedor' class="col s12 st_lks container_ft_1 height_-83px div_container overflow-y_hidden" data-col="scroll_tab_contenedor" data-col_2="div_width_-5px"> -->
+
+		<div class='col s12 sub_container'>
+		<!-- <div class='col s12 sub_container full_height'> -->
+
+			<!--
+			<div class="col s12 m12 l6 xl6 img-holder full_height hide_for_992px">
+				<div class="info-holder">
+					<img src='../../../images/fondos/login_1.svg' />
+				</div>
+			</div>
+			-->
+
+			<div class="col s12 m12 l6 xl6">
+			<!-- <div class="col s12 m12 l6 xl6 full_height" data-col="scroll_panel_2" data-col_2="div_width_-5px"> -->
+			
+				<section>
+
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label_head'>Datos generales</div>
+						</div>
+					</div>
+										
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='tip_prod'>Usuario</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_usu' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<input type="text" placeholder="" value="" class='lks' data-col='cdsc_usu' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='emp'>Empresa</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_emp' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<select class="select2 s2" data-col='emp' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select>
+							</div>
+						</div>
+					</div>
+										
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='uop'>Unidad Operativa</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_uop' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<select class="select2 s2" data-col='uop' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="row">
+						<div class="col s4">
+							<div class='col_label'>Fecha</div>
+							<input type="text" autocomplete="off" placeholder="" value="" class='lks' data-col='dfch' data-dsc='Fecha' data-clear="n" data-hb_v="n" data-hb_n="s" data-hb_e="n" required />
+						</div>
+						<!--
+						<div class="col s4">
+							<div class='col_label'>Vencimiento</div>
+							<input type="text" autocomplete="off" placeholder="" value="" class='lks' data-col='dfch_venc' data-dsc='Fecha de Vencimiento' data-hb_v="n" data-hb_n="s" data-hb_e="s" required />
+						</div>
+						<div class="col s4">
+							<div class='col_label' data-lnk="_lnk_open_modal_tpc" data-hb_v="s" data-hb_n="s" data-hb_e="s">Moneda</div>
+							<input type="text" placeholder="" value="" class='lks' data-col='cdsc_mon' readonly />
+						</div>
+						-->
+					</div>
+
+				</section>
+				
+				
+				<!-- ============================== -->
+				
+				<section>
+				
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label_head'>Aplicaciones disponibles</div>
+						</div>
+					</div>
+
+				</section>
+			
+				
+				<div class="nav-mosaico">
+					<div class="nav-mosaico-content">
+					<!--
+						<div class="nav-mosaico-content-item waves-effect waves-light-07" role="button" data-lnk="_lnk_open_modulo">
+							<div class="nav-mosaico-content-item-image img_emp_1"></div>
+							<div class="nav-mosaico-content-item-label"><span>Empresa</span></div>
+						</div>
+						<div class="nav-mosaico-content-item waves-effect waves-light-07" role="button" data-lnk="_lnk_open_modulo">
+							<div class="nav-mosaico-content-item-image img_adm_1"></div>
+							<div class="nav-mosaico-content-item-label"><span>Administración</span></div>
+						</div>
+						<div class="nav-mosaico-content-item waves-effect waves-light-07" role="button" data-lnk="_lnk_open_modulo">
+							<div class="nav-mosaico-content-item-image img_alm_1"></div>
+							<div class="nav-mosaico-content-item-label"><span>Almacen</span></div>
+						</div>
+						<div class="nav-mosaico-content-item waves-effect waves-light-07" role="button" data-lnk="_lnk_open_modulo">
+							<div class="nav-mosaico-content-item-image img_com_1"></div>
+							<div class="nav-mosaico-content-item-label"><span>Compras</span></div>
+						</div>
+						<div class="nav-mosaico-content-item waves-effect waves-light-07" role="button" data-lnk="_lnk_open_modulo">
+							<div class="nav-mosaico-content-item-image img_ven_1"></div>
+							<div class="nav-mosaico-content-item-label"><span>Ventas</span></div>
+						</div>
+						<div class="nav-mosaico-content-item waves-effect waves-light-07" role="button" data-lnk="_lnk_open_modulo">
+							<div class="nav-mosaico-content-item-image img_ctas_1"></div>
+							<div class="nav-mosaico-content-item-label"><span>Ctas. por Cobrar</span></div>
+						</div>
+						<div class="nav-mosaico-content-item waves-effect waves-light-07" role="button" data-lnk="_lnk_open_modulo">
+							<div class="nav-mosaico-content-item-image img_ctas_1"></div>
+							<div class="nav-mosaico-content-item-label"><span>Ctas. por Pagar</span></div>
+						</div>
+						<div class="nav-mosaico-content-item waves-effect waves-light-07" role="button" data-lnk="_lnk_open_modulo">
+							<div class="nav-mosaico-content-item-image img_tes_1"></div>
+							<div class="nav-mosaico-content-item-label"><span>Tesoreria</span></div>
+						</div>
+					-->
+					</div>
+				</div>
+			
+				<!-- ============================== -->
+
+
+			</div>
+
+
+			
+			
+			<div class="col s12 m12 l6 xl6">
+			
+				<!--
+				<section>
+				
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label_head'>Aplicaciones disponibles</div>
+						</div>
+					</div>
+
+				</section>
+			
+				<div class="nav-mosaico">
+					<div class="nav-mosaico-content">
+						<div class="nav-mosaico-content-item waves-effect waves-light-07" role="button" onclick="validateForm()">
+							<div class="nav-mosaico-content-item-image img_emp_1"></div>					
+							<div class="nav-mosaico-content-item-label"><span>Empresa</span></div>					
+						</div>
+						<div class="nav-mosaico-content-item waves-effect waves-light-07" role="button" onclick="validateForm()">
+							<div class="nav-mosaico-content-item-image img_adm_1"></div>					
+							<div class="nav-mosaico-content-item-label"><span>Administración</span></div>					
+						</div>
+						<div class="nav-mosaico-content-item waves-effect waves-light-07" role="button" onclick="validateForm()">
+							<div class="nav-mosaico-content-item-image img_alm_1"></div>					
+							<div class="nav-mosaico-content-item-label"><span>Almacen</span></div>					
+						</div>
+						<div class="nav-mosaico-content-item waves-effect waves-light-07" role="button" onclick="validateForm()">
+							<div class="nav-mosaico-content-item-image img_com_1"></div>					
+							<div class="nav-mosaico-content-item-label"><span>Compras</span></div>					
+						</div>
+						<div class="nav-mosaico-content-item waves-effect waves-light-07" role="button" onclick="validateForm()">
+							<div class="nav-mosaico-content-item-image img_ven_1"></div>					
+							<div class="nav-mosaico-content-item-label"><span>Ventas</span></div>					
+						</div>
+						<div class="nav-mosaico-content-item waves-effect waves-light-07" role="button" onclick="validateForm()">
+							<div class="nav-mosaico-content-item-image img_ctas_1"></div>					
+							<div class="nav-mosaico-content-item-label"><span>Ctas. por Cobrar</span></div>					
+						</div>
+						<div class="nav-mosaico-content-item waves-effect waves-light-07" role="button" onclick="validateForm()">
+							<div class="nav-mosaico-content-item-image img_ctas_1"></div>					
+							<div class="nav-mosaico-content-item-label"><span>Ctas. por Pagar</span></div>					
+						</div>
+						<div class="nav-mosaico-content-item waves-effect waves-light-07" role="button" onclick="validateForm()">
+							<div class="nav-mosaico-content-item-image img_tes_1"></div>					
+							<div class="nav-mosaico-content-item-label"><span>Tesoreria</span></div>					
+						</div>
+					</div>
+				</div>
+				-->
+
+			</div>
+
+
+		</div>
+	
+	</div>
+
+</form>
+@section scripts
+{
+<script type="text/javascript" src="../../scripts/lks/frm_main.js"></script>
+}

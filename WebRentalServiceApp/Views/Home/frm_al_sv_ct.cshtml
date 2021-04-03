@@ -1,0 +1,240 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<form id="form_main">
+
+	
+	<div id="tab_1" class="col s12 st_lks container_ft_1 height_-137px div_container" data-col="scroll_tab_1" data-col_2="div_width_-5px">
+
+		<div class='col s12 sub_container'>
+		
+			<div class="col s12 m12 l6 xl6">
+			
+				<section>
+
+					<div class="row" style='height: 47px;'>
+						<div class="col s12" style='height: 20px;'>
+							<div class='col_label_head'>Composicion del código</div>
+						</div>
+						<div class='lks switch'>
+							<label>
+								<span>Estado</span>
+								<input type='checkbox' class='show_cest' data-col='cest' data-hb_v='n' data-hb_n='s' data-hb_e='s' />
+								<span class='lever'></span>
+							</label>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='lin'>Línea</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_lin' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<select class="select2 s2" data-col='lin' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='slin'>Sub Línea</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_slin' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<select class="select2 s2" data-col='slin' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select>
+							</div>
+						</div>
+					</div>
+
+					<!--
+					<div class="row">
+						<div class="col s2">
+							<div class='col_label' data-col_dsc='cident_1_false'>Correlativo</div>
+							<input type="text" placeholder="" value="" class='lks' data-col='cident_1_false' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+						</div>
+					</div>
+					
+					<div style="display: none;">
+						<div class="row">
+							<div class="col s4">
+								<div class='col_label' data-col_dsc='cident_1'>Modelo</div>
+								<input type="text" placeholder="" value="" class='lks' data-col='cident_1' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							
+							<div class="col s4">
+								<div class='col_label' data-col_dsc='cident_2'>Subgrupo</div>
+								<input type="text" placeholder="" value="" class='lks' data-col='cident_2' data-hb_v="n" data-hb_n="s" data-hb_e="s" />
+							</div>
+							
+							<div class="col s4">
+								<div class='col_label' data-col_dsc='cident_3'>ID</div>
+								<input type="text" placeholder="" value="" class='lks' data-col='cident_3' data-hb_v="n" data-hb_n="s" data-hb_e="s" />
+							</div>
+						</div>
+					</div>
+					-->
+				</section>
+				
+				
+				
+				<section>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label_head'>Datos generales</div>
+						</div>
+					</div>
+					
+					<!--
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='it_tip'>Tipo de Artículo</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_it_tip' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<select class="select2 s2" data-col='it_tip' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select>
+							</div>
+						</div>
+					</div>
+					-->
+					
+					<div class="row">
+						<div class="col s6">
+							<div class='col_label' data-col_dsc='ccod_it'>Código</div>
+							<input type="text" class='lks' autocomplete="off" placeholder="" value="" data-col='ccod_it' data-hb_v="n" data-hb_n="s" data-hb_e="n" required />
+						</div>
+						<div class="col s6">
+							<div class='col_label'>Código SUNAT</div>
+							<input type="text" class='lks' autocomplete="off" placeholder="" value="" data-col='ccod_sunat' data-hb_v="n" data-hb_n="s" data-hb_e="s" />
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label' data-col_dsc='cdsc_it'>Descripción</div>
+							<input type="text" class='lks' autocomplete="off" placeholder="" value="" data-col='cdsc_it' data-hb_v="n" data-hb_n="s" data-hb_e="s" required />
+							<!-- <input type="text" data-length="10" placeholder="" value="" data-col="cdsc_it" data-hb_v="n" data-hb_n="s" data-hb_e="s" required /> -->
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label'>Descripción Larga</div>
+							<input type='text' autocomplete="off" placeholder='' value='' class='lks' data-col='cdsc_it_lga' data-hb_v='n' data-hb_n='s' data-hb_e='s' />
+						</div>
+					</div>
+					
+				</section>
+			</div>
+
+
+			
+			<div class="col s12 m12 l6 xl6">
+				
+				<section>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label_head'>
+								<label data-lnk='_lnk_add_row_imp' data-hb_v='n' data-hb_n='s' data-hb_e='s'>Impuestos</label>
+							</div>
+						</div>
+					</div>
+					<div class='row data-row_head display_none' id='title_row_imp'>
+						<!-- <div class='col s12 ft_sc'> -->
+							<div class='col s9' data-col_before='s8' data-col_after='s9'>
+								<div class='col_label' data-col_dsc='it_tip'>Descripción</div>
+							</div>
+							<div class='col s3'>
+								<div class='col_label' data-col_dsc='it_tip'>Porcentaje</div>
+							</div>
+						<!-- </div> -->
+					</div>
+					<div data-rows='imp'></div>
+				</section>
+				
+
+				
+				<section>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label_head'>Otras Características</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label'>Observaciones</div>
+							<input type="text" class='lks' autocomplete="off" placeholder="" value="" data-col='tobs' data-hb_v="n" data-hb_n="s" data-hb_e="s" />
+							<!-- <textarea placeholder="" class="lks materialize-textarea" data-col="tobs" data-hb_v="n" data-hb_n="s" data-hb_e="s"></textarea> -->
+						</div>
+					</div>
+				</section>
+				
+
+			</div>
+
+		</div>
+	
+	</div>
+
+	
+
+	<!-- <div id="tab_2" class="col s12 ft_sc div_container" style="position: relative; top: 85px;"> -->
+	<div id="tab_2" class="col s12 ft_sc div_container">
+
+		<!--
+		<div class="col s12 m6 l6 xl6">
+			
+			<section>
+			
+				<div class="row ft_2 st-1 ft_sc">
+					<div class="col s12">
+						<label class="col_label_head">Imagenes</label>
+						<div class="sp"></div>
+					</div>
+				</div>
+			-->
+				
+				
+				<!-- =========================================================================== -->
+				<!-- <div class="row ft_2 st-1 ft_sc"> -->
+				<div class="row ft_2">
+					<div class="col s12">
+						
+						<!-- <div class="input-field"> -->
+							<!-- <label class="active">Photos</label> -->
+							<div class="input-images-2"></div>
+						<!-- </div> -->
+						
+					</div>
+				</div>
+				<!-- =========================================================================== -->
+
+				
+			<!--
+			</section>
+			
+		</div>
+		-->
+		
+		
+	
+	</div>
+
+</form>
+
+
+@section scripts
+{
+<script type="text/javascript" src="../../scripts/lks/frm_al_sv_ct.js"></script>
+}

@@ -1,0 +1,394 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<form id="form_main">
+	<div id="tab_1" class="col s12 ft_sc div_container">
+        
+		<div class="col s12 m6 l7 xl7">
+			
+			<section>
+
+				<div class='row ft_2 st-1 ft_sc' style='height: 46.5px;'>
+					<div class='col s12' style='height: 20px;'>
+						<label class='col_label_head'>Composicion del código</label>
+						<div class='sp'></div>
+					</div>
+					<div class='lks switch'>
+						<label>
+							<span>Estado</span>
+							<input type='checkbox' class='show_cest' data-col='cest' data-hb_v='n' data-hb_n='s' data-hb_e='s' />
+							<span class='lever'></span>
+						</label>
+					</div>
+				</div>
+
+				
+				<div class="row ft_2 st-1">
+					<div class="col s12 ft_sc">
+						<div class="col s12">
+							<label data-col_dsc='lin'>Línea</label>
+						</div>
+						<div class="col s2 hide_for_992px">
+							<input type="text" placeholder="" value="" data-col='ccod_lin' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+						</div>
+						<div class="col s12 m12 l10 xl10">
+							<select class="select2" data-col='lin' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select>
+						</div>
+					</div>
+				</div>
+
+				<div class="row ft_2 st-1">
+					<div class="col s12 ft_sc">
+						<div class="col s12">
+							<label data-col_dsc='slin'>Sub Línea</label>
+						</div>
+						<div class="col s2 hide_for_992px">
+							<input type="text" placeholder="" value="" data-col='ccod_slin' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+						</div>
+						<div class="col s12 m12 l10 xl10">
+							<select class="select2" data-col='slin' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select>
+						</div>
+					</div>
+				</div>
+
+				<div class="row ft_2 st-1">
+					<div class="col s12 ft_sc">
+						
+						<div class="col s2">
+							<label>Correlativo</label>
+							<input type="text" placeholder="" value="" data-col='cident_1_false' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+						</div>
+						
+						<div style="display: none;">
+							<div class="col s4">
+								<label>Modelo</label>
+								<input type="text" placeholder="" value="" data-col='cident_1' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+
+							<div class="col s4">
+								<label>Subgrupo</label>
+								<input type="text" placeholder="" value="" data-col='cident_2' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s4">
+								<label>ID</label>
+								<input type="text" placeholder="" value="" data-col='cident_3' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+			</section>
+					
+			<section>
+
+				<div class="row ft_2 st-1 ft_sc">
+					<div class="col s12">
+						<label class="col_label_head">Datos generales</label>
+						<div class="sp"></div>
+					</div>
+				</div>
+				
+				<div class="row ft_2 st-1">
+					<div class="col s12 ft_sc">
+						<div class="col s12">
+							<label data-col_dsc='it_tip'>Tipo de Artículo</label>
+						</div>
+						<div class="col s2 hide_for_992px">
+							<input type="text" placeholder="" value="" data-col='ccod_it_tip' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+						</div>
+						<div class="col s12 m12 l10 xl10">
+							<select class="select2" data-col='it_tip' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select>
+						</div>
+					</div>
+				</div>
+
+				<div class="row ft_2 st-1">
+					<div class="col s12 ft_sc">
+						<div class="col s6">
+							<label data-col_dsc='ccod_it'>Código</label>
+							<input type="text" placeholder="" value="" data-col="ccod_it" data-hb_v="n" data-hb_n="s" data-hb_e="n" required />
+						</div>
+						<div class="col s6">
+							<label>Código SUNAT</label>
+							<input type="text" placeholder="" value="" data-col="ccod_sunat" data-hb_v="n" data-hb_n="s" data-hb_e="s" />
+						</div>
+					</div>
+				</div>
+
+				<div class="row ft_2 st-1">
+					<div class="col s12 ft_sc">
+						<div class="col s12">
+							<label data-col_dsc='cdsc_it'>Descripción</label>
+							<input type="text" data-length="10" placeholder="" value="" data-col="cdsc_it" data-hb_v="n" data-hb_n="s" data-hb_e="s" required />
+						</div>
+					</div>
+				</div>
+
+				<div class="row ft_2_textarea st-1">
+					<div class="col s12 ft_sc">
+						<div class="col s12">
+							<label>Descripción Larga</label>
+							<textarea placeholder="" class="lks materialize-textarea" data-col="cdsc_it_lga" data-hb_v="n" data-hb_n="s" data-hb_e="s"></textarea>
+						</div>
+					</div>
+				</div>
+
+			</section>
+			
+		</div>
+		
+		<div class="col s12 m6 l5 xl5">
+			
+			<section>
+			
+				<div class="row ft_2 st-1 ft_sc">
+					<div class="col s12">
+						<label class="col_label_head">Presentación</label>
+						<div class="sp"></div>
+					</div>
+				</div>
+
+				<div class="row ft_2 st-1">
+					<div class="col s12 ft_sc">
+						<div class="col s12">
+							<label data-col_dsc='um'>Unidad de Medida</label>
+						</div>
+						<div class="col s3 hide_for_992px">
+							<input type="text" placeholder="" value="" data-col='ccod_um' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+						</div>
+						<div class="col s12 m12 l9 xl9">
+							<select class="select2" data-col='um' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select>
+						</div>
+					</div>
+				</div>
+
+			</section>
+			
+			<section class="section_lks st-1">
+				<div class="row ft_2 st-1 ft_sc">
+					<div class="col s12">
+						<label class="col_label_head" data-lnk='_lnk_add_row_um' data-hb_v="n" data-hb_n="s" data-hb_e="s">Otras presentaciones</label>
+						<div class="sp"></div>
+					</div>
+				</div>
+				<div class="row ft_2 st-1 data-row_head">
+					<div class="col s12 ft_sc">
+						<div class="col s4">
+							<label data-col_dsc='it_tip'>Unidad de Medida</label>
+						</div>
+						<div class="col s4" data-col_before="s3" data-col_after="s4">
+							<label data-col_dsc='it_tip'>Cant. Equiv.</label>
+						</div>
+						<div class="col s4">
+							<label data-col_dsc='it_tip'>U/M Equivalente</label>
+						</div>
+					</div>
+				</div>
+				<div data-rows="um"></div>
+			</section>
+
+			<section class="section_lks st-1">
+				<div class="row ft_2 st-1 ft_sc">
+					<div class="col s12">
+						<label class="col_label_head" data-lnk='_lnk_add_row_imp' data-hb_v="n" data-hb_n="s" data-hb_e="s">Impuestos</label>
+						<div class="sp"></div>
+					</div>
+				</div>
+				<div class="row ft_2 st-1 data-row_head">
+					<div class="col s12 ft_sc">
+						<div class="col s9" data-col_before="s8" data-col_after="s9">
+							<label data-col_dsc='it_tip'>Descripción</label>
+						</div>
+						<div class="col s3">
+							<label data-col_dsc='it_tip'>Porcentaje</label>
+						</div>
+					</div>
+				</div>
+				<div data-rows="imp"></div>
+			</section>
+			
+		</div>
+
+	</div>
+
+	<div id="tab_2" class="col s12 ft_sc div_container" style="position: relative; top: 85px;">
+		
+		<div class="_fixed _fixed-2">
+			<div class='row ft_2_row st-1'>
+			
+				<div class="col s12 m12 l10 xl10 ft_sc">
+					<div class="col s3 hide_for_600px">
+						<label>Código</label>
+						<input placeholder="" value="" type="text" data-col='ccod_it' data-vw readonly />
+					</div>
+					<div class="col s12 m9 l9">
+						<label>Descripción</label>
+						<input placeholder="" value="" type="text" data-col='cdsc_it' data-vw readonly />
+					</div>
+				</div>
+				
+				<div class="col s2 ft_sc hide_for_992px">
+					<div class="col s4 m2 l12">
+						<label>Presentación</label>
+						<input placeholder="" value="" type="text" data-col='cdsc_um' data-vw readonly />
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="_fixed _fixed-1" style="height: 96px;"></div>
+
+		<div class="col s12 m7 l7 xl7">
+
+			<section>
+
+				<div class="row ft_2 st-1 ft_sc">
+					<div class="col s12">
+						<label class="col_label_head">Características del Artículo</label>
+						<div class="sp"></div>
+					</div>
+				</div>
+				
+				<div class="row ft_2 st-1">
+					<div class="col s12 ft_sc">
+						<div class="col s4">
+							<label data-col_dsc='mc'>Marca</label>
+							<input type="text" class="display_none" placeholder="" value="" data-col='ccod_mc' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							<select class="select2" data-col='mc' data-allow-clear='true' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod></select>
+						</div>
+						<div class="col s4">
+							<label>Modelo</label>
+							<input type="text" placeholder="" value="" data-col='cmodelo' data-hb_v="n" data-hb_n="s" data-hb_e="s" />
+						</div>
+						<div class="col s4">
+							<label>Color</label>
+							<input type="text" placeholder="" value="" data-col='ccolor' data-hb_v="n" data-hb_n="s" data-hb_e="s" />
+						</div>
+					</div>
+				</div>
+
+				<div class="row ft_2 st-1">
+					<div class="col s12 ft_sc">
+						<div class="col s4">
+							<label>Peso</label>
+							<input type="text" placeholder="" value="" data-col='cpeso' data-hb_v="n" data-hb_n="s" data-hb_e="s" />
+						</div>
+						<div class="col s4">
+							<label>Volumen</label>
+							<input type="text" placeholder="" value="" data-col='cvolumen' data-hb_v="n" data-hb_n="s" data-hb_e="s" />
+						</div>
+						<div class="col s4">
+							<label>Garantía</label>
+							<input type="text" placeholder="" value="" data-col='cgarantia' data-hb_v="n" data-hb_n="s" data-hb_e="s" />
+						</div>
+					</div>
+				</div>
+
+			</section>
+			
+			<section>
+
+				<div class="row ft_2 st-1 ft_sc">
+					<div class="col s12">
+						<label class="col_label_head">Otras Características</label>
+						<div class="sp"></div>
+					</div>
+				</div>
+
+				<div class="row ft_2_textarea st-1">
+					<div class="col s12 ft_sc">
+						<div class="col s12">
+							<label>Observaciones</label>
+							<textarea placeholder="" class="lks materialize-textarea" data-col="tobs" data-hb_v="n" data-hb_n="s" data-hb_e="s"></textarea>
+						</div>
+					</div>
+				</div>
+
+			</section>
+			
+		</div>
+		
+		<div class="col s12 m5 l5 xl5">
+			
+			<section>
+			
+				<div class="row ft_2 st-1 ft_sc">
+					<div class="col s12">
+						<label class="col_label_head">Límites de stock</label>
+						<div class="sp"></div>
+					</div>
+				</div>
+
+				<div class="row ft_2 st-1">
+					<div class="col s12 ft_sc">
+						<div class="col s6">
+							<label>Stock Mínimo</label>
+							<input type="text" placeholder="" value="" class="text_align_right" data-col='cstock_min' data-hb_v="n" data-hb_n="s" data-hb_e="s" />
+						</div>
+						<div class="col s6">
+							<label>Stock Máximo</label>
+							<input type="text" placeholder="" value="" class="text_align_right" data-col='cstock_max' data-hb_v="n" data-hb_n="s" data-hb_e="s" />
+						</div>
+					</div>
+				</div>
+
+			</section>
+			
+			
+		</div>
+		
+	</div>
+
+
+	<!-- <div id="tab_3" class="col s12 ft_sc div_container" style="position: relative; top: 85px;"> -->
+	<div id="tab_3" class="col s12 ft_sc div_container">
+
+		<!--
+		<div class="col s12 m6 l6 xl6">
+			
+			<section>
+			
+				<div class="row ft_2 st-1 ft_sc">
+					<div class="col s12">
+						<label class="col_label_head">Imagenes</label>
+						<div class="sp"></div>
+					</div>
+				</div>
+			-->
+				
+				
+				<!-- =========================================================================== -->
+				<!-- <div class="row ft_2 st-1 ft_sc"> -->
+				<div class="row ft_2">
+					<div class="col s12">
+						
+						<!-- <div class="input-field"> -->
+							<!-- <label class="active">Photos</label> -->
+							<div class="input-images-2"></div>
+						<!-- </div> -->
+						
+					</div>
+				</div>
+				<!-- =========================================================================== -->
+
+				
+			<!--
+			</section>
+			
+		</div>
+		-->
+		
+		
+	
+	</div>
+
+</form>
+
+
+@section scripts
+{
+<script type="text/javascript" src="../../scripts/lks/Index.js"></script>
+}

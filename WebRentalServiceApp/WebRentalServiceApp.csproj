@@ -1,0 +1,980 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{93ABEFBD-8F10-49AD-8077-3F688EB88632}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebRentalServiceApp</RootNamespace>
+    <AssemblyName>WebRentalServiceApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="base.class.data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\base.class.data.dll</HintPath>
+    </Reference>
+    <Reference Include="base.class.interfase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\base.class.interfase.dll</HintPath>
+    </Reference>
+    <Reference Include="base.class.negocio, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\base.class.negocio.dll</HintPath>
+    </Reference>
+    <Reference Include="Centrix.Helper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\Centrix.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.2.1, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Ferreyros.Tools.DB2Helper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\Ferreyros.Tools.DB2Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\Dlls\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\Dlls\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\Dlls\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\Dlls\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\Dlls\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\Dlls\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\Dlls\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Tasks.CodeAnalysis">
+      <HintPath>..\Dlls\Microsoft.Build.Tasks.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="SEG_Class, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\SEG_Class.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\Dlls\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebApiContrib.Formatting.Jsonp, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\WebApiContrib.Formatting.Jsonp.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\1.png" />
+    <Content Include="Content\1_.png" />
+    <Content Include="Content\1__.png" />
+    <Content Include="Content\1___.png" />
+    <Content Include="Content\1____.png" />
+    <Content Include="Content\2.png" />
+    <Content Include="Content\animate\animate.css" />
+    <Content Include="Content\chosen-sprite%402x.png" />
+    <Content Include="Content\chosen-sprite.png" />
+    <Content Include="Content\datatable\exportar\js\buttons.html5.min.js" />
+    <Content Include="Content\datatable\exportar\js\dataTables.buttons.js" />
+    <Content Include="Content\datatable\exportar\js\dataTables.buttons.min.js" />
+    <Content Include="Content\datatable\exportar\js\jszip.js" />
+    <Content Include="Content\datatable\exportar\js\jszip.min.js" />
+    <Content Include="Content\datatable\export\css\buttons.dataTables.css" />
+    <Content Include="Content\datatable\export\css\buttons.dataTables.min.css" />
+    <Content Include="Content\datatable\export\js\buttons.flash.js" />
+    <Content Include="Content\datatable\export\js\buttons.flash.min.js" />
+    <Content Include="Content\datatable\export\js\buttons.html5.js" />
+    <Content Include="Content\datatable\export\js\buttons.html5.min.js" />
+    <Content Include="Content\datatable\export\js\buttons.print.js" />
+    <Content Include="Content\datatable\export\js\buttons.print.min.js" />
+    <Content Include="Content\datatable\export\js\dataTables.buttons.js" />
+    <Content Include="Content\datatable\export\js\dataTables.buttons.min.js" />
+    <Content Include="Content\datatable\export\js\jszip.js" />
+    <Content Include="Content\datatable\export\js\jszip.min.js" />
+    <Content Include="Content\datatable\export\js\pdfmake.js" />
+    <Content Include="Content\datatable\export\js\pdfmake.min.js" />
+    <Content Include="Content\datatable\export\js\vfs_fonts.js" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\css\fixedColumns.bootstrap.css" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\css\fixedColumns.bootstrap.min.css" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\css\fixedColumns.bootstrap4.css" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\css\fixedColumns.bootstrap4.min.css" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\css\fixedColumns.dataTables.css" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\css\fixedColumns.dataTables.min.css" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\css\fixedColumns.foundation.css" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\css\fixedColumns.foundation.min.css" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\css\fixedColumns.jqueryui.css" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\css\fixedColumns.jqueryui.min.css" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\css\fixedColumns.semanticui.css" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\css\fixedColumns.semanticui.min.css" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\js\dataTables.fixedColumns.js" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\js\dataTables.fixedColumns.min.js" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\js\fixedColumns.bootstrap.js" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\js\fixedColumns.bootstrap.min.js" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\js\fixedColumns.bootstrap4.js" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\js\fixedColumns.bootstrap4.min.js" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\js\fixedColumns.dataTables.js" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\js\fixedColumns.foundation.js" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\js\fixedColumns.foundation.min.js" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\js\fixedColumns.jqueryui.js" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\js\fixedColumns.jqueryui.min.js" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\js\fixedColumns.semanicui.js" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\js\fixedColumns.semanticui.js" />
+    <Content Include="Content\datatable\FixedColumn\FixedColumns-3.2.5\js\fixedColumns.semanticui.min.js" />
+    <Content Include="Content\datatable\keyTable\js\dataTables.keyTable.js" />
+    <Content Include="Content\datatable\keyTable\js\dataTables.keyTable.min.js" />
+    <Content Include="Content\datatable\responsive\css\responsive.dataTables.css" />
+    <Content Include="Content\datatable\responsive\css\responsive.dataTables.min.css" />
+    <Content Include="Content\datatable\responsive\js\dataTables.responsive.js" />
+    <Content Include="Content\datatable\responsive\js\dataTables.responsive.min.js" />
+    <Content Include="Content\datatable\rowGroup\css\rowGroup.dataTables.css" />
+    <Content Include="Content\datatable\rowGroup\css\rowGroup.dataTables.min.css" />
+    <Content Include="Content\datatable\rowGroup\js\dataTables.rowGroup.js" />
+    <Content Include="Content\datatable\rowGroup\js\dataTables.rowGroup.min.js" />
+    <Content Include="Content\datatable\select\css\select.dataTables.css" />
+    <Content Include="Content\datatable\select\css\select.dataTables.min.css" />
+    <Content Include="Content\datatable\select\js\dataTables.select.js" />
+    <Content Include="Content\datatable\select\js\dataTables.select.min.js" />
+    <Content Include="Content\datatable\_initialization.lks\css\jquery.dataTables.lks.css" />
+    <Content Include="Content\datatable\_initialization\css\jquery.dataTables.css" />
+    <Content Include="Content\datatable\_initialization\css\jquery.dataTables.min.css" />
+    <Content Include="Content\datatable\_initialization\js\jquery.dataTables.js" />
+    <Content Include="Content\datatable\_materialize\css\datatables.materialize.lks.css" />
+    <Content Include="Content\datatable\_resources\img\b_editar.png" />
+    <Content Include="Content\datatable\_resources\img\b_eliminar.png" />
+    <Content Include="Content\datatable\_resources\img\left_arrow.png" />
+    <Content Include="Content\datatable\_resources\img\Nueva carpeta\left_arrow.png" />
+    <Content Include="Content\datatable\_resources\img\Nueva carpeta\right_arrow.png" />
+    <Content Include="Content\datatable\_resources\img\pencil.png" />
+    <Content Include="Content\datatable\_resources\img\right_arrow.png" />
+    <Content Include="Content\datatable\_resources\img\sort_asc.png" />
+    <Content Include="Content\datatable\_resources\img\sort_asc_disabled.png" />
+    <Content Include="Content\datatable\_resources\img\sort_both.png" />
+    <Content Include="Content\datatable\_resources\img\sort_desc.png" />
+    <Content Include="Content\datatable\_resources\img\sort_desc_disabled.png" />
+    <Content Include="Content\enjoyhint\dist\all.js" />
+    <Content Include="Content\enjoyhint\dist\enjoyhint.css" />
+    <Content Include="Content\enjoyhint\wizard_fact.js" />
+    <Content Include="Content\fonts\css\fonts.css" />
+    <Content Include="Content\fuentes\css.css" />
+    <Content Include="Content\icon.png" />
+    <Content Include="Content\icon1.png" />
+    <Content Include="Content\icon2.png" />
+    <Content Include="Content\images\6a00d83451b9ae69e200e54f418eeb8834-800wi.jpg" />
+    <Content Include="Content\images\aplicaciones\adm_1.png" />
+    <Content Include="Content\images\aplicaciones\alm_1.png" />
+    <Content Include="Content\images\aplicaciones\alm_2.png" />
+    <Content Include="Content\images\aplicaciones\alm_2_Original.png" />
+    <Content Include="Content\images\aplicaciones\alm_3.png" />
+    <Content Include="Content\images\aplicaciones\com_1.png" />
+    <Content Include="Content\images\aplicaciones\ctas_1.png" />
+    <Content Include="Content\images\aplicaciones\delivery_1.png" />
+    <Content Include="Content\images\aplicaciones\delivery_2.png" />
+    <Content Include="Content\images\aplicaciones\emp_1.png" />
+    <Content Include="Content\images\aplicaciones\emp_2.png" />
+    <Content Include="Content\images\aplicaciones\settings_1.png" />
+    <Content Include="Content\images\aplicaciones\settings_2.png" />
+    <Content Include="Content\images\aplicaciones\tes_1.png" />
+    <Content Include="Content\images\aplicaciones\ven_1.png" />
+    <Content Include="Content\images\big-magnifying-glass.png" />
+    <Content Include="Content\images\cancel.png" />
+    <Content Include="Content\images\default-avatar.jpg" />
+    <Content Include="Content\images\del - copia %282%29.png" />
+    <Content Include="Content\images\del - copia.png" />
+    <Content Include="Content\images\del.png" />
+    <Content Include="Content\images\download_01.png" />
+    <Content Include="Content\images\excel_02.png" />
+    <Content Include="Content\images\footer-blog2.jpg" />
+    <Content Include="Content\images\garbage-bin.png" />
+    <Content Include="Content\images\garbage-bin0.png" />
+    <Content Include="Content\images\garbage-bin00.png" />
+    <Content Include="Content\images\garbage-bin1.png" />
+    <Content Include="Content\images\iconos\1.png" />
+    <Content Include="Content\images\iconos\2.png" />
+    <Content Include="Content\images\iconos\3.png" />
+    <Content Include="Content\images\iconos\4.png" />
+    <Content Include="Content\images\iconos\5.png" />
+    <Content Include="Content\images\iconos\6.png" />
+    <Content Include="Content\images\iconos\7.png" />
+    <Content Include="Content\images\iconos\8.png" />
+    <Content Include="Content\images\iconos\9.png" />
+    <Content Include="Content\images\iconos\eliminar.png" />
+    <Content Include="Content\images\iconos\help_1.png" />
+    <Content Include="Content\images\iconos\icon.png" />
+    <Content Include="Content\images\iconos\left_arrow.png" />
+    <Content Include="Content\images\iconos\right_arrow.png" />
+    <Content Include="Content\images\iconos\x_01_ELIMINAR.png" />
+    <Content Include="Content\images\icons8-escoba-96.png" />
+    <Content Include="Content\images\icons8-escoba-961.png" />
+    <Content Include="Content\images\icons8-escoba-96_.png" />
+    <Content Include="Content\images\logos\logo_1.png" />
+    <Content Include="Content\images\materialize\1.png" />
+    <Content Include="Content\images\materialize\2.png" />
+    <Content Include="Content\images\materialize\4.png" />
+    <Content Include="Content\images\more.png" />
+    <Content Include="Content\images\more0.png" />
+    <Content Include="Content\images\more00.png" />
+    <Content Include="Content\images\more11.png" />
+    <Content Include="Content\images\more2.png" />
+    <Content Include="Content\images\new_1.png" />
+    <Content Include="Content\images\new_2.png" />
+    <Content Include="Content\images\opciones\eliminar_01.png" />
+    <Content Include="Content\images\otros\00.png" />
+    <Content Include="Content\images\otros\01.png" />
+    <Content Include="Content\images\otros\02.png" />
+    <Content Include="Content\images\otros\023.png" />
+    <Content Include="Content\images\otros\03.png" />
+    <Content Include="Content\images\otros\04.png" />
+    <Content Include="Content\images\otros\05.png" />
+    <Content Include="Content\images\otros\111.png" />
+    <Content Include="Content\images\otros\22222.png" />
+    <Content Include="Content\images\otros\2222222.png" />
+    <Content Include="Content\images\otros\2222222222.png" />
+    <Content Include="Content\images\otros\6.png" />
+    <Content Include="Content\images\otros\666.png" />
+    <Content Include="Content\images\otros\66666.jpg" />
+    <Content Include="Content\images\otros\777.png" />
+    <Content Include="Content\images\otros\77777777.png" />
+    <Content Include="Content\images\otros\cogwheel %2813%29.png" />
+    <Content Include="Content\images\otros\data1base.png" />
+    <Content Include="Content\images\otros\database.png" />
+    <Content Include="Content\images\otros\e1 - copia.jpg" />
+    <Content Include="Content\images\otros\eliminar.png" />
+    <Content Include="Content\images\otros\h1.png" />
+    <Content Include="Content\images\otros\h2.png" />
+    <Content Include="Content\images\otros\i1.png" />
+    <Content Include="Content\images\otros\icon0.png" />
+    <Content Include="Content\images\otros\icon00.png" />
+    <Content Include="Content\images\otros\icon1.png" />
+    <Content Include="Content\images\otros\icon2.png" />
+    <Content Include="Content\images\otros\n2.png" />
+    <Content Include="Content\images\otros\n4.png" />
+    <Content Include="Content\images\otros\n5.png" />
+    <Content Include="Content\images\otros\n6.png" />
+    <Content Include="Content\images\otros\payment-method %286%29.png" />
+    <Content Include="Content\images\otros\remove-button.png" />
+    <Content Include="Content\images\otros\sdf.png" />
+    <Content Include="Content\images\otros\settings %2828%29.png" />
+    <Content Include="Content\images\otros\settings %2867%29.png" />
+    <Content Include="Content\images\otros\u1.png" />
+    <Content Include="Content\images\retro-movie-camera.png" />
+    <Content Include="Content\images\Untitled1.png" />
+    <Content Include="Content\images\usuarios\ninguno_1.gif" />
+    <Content Include="Content\input\js\input.lks.js" />
+    <Content Include="Content\iziToast-master\assets\jquery\js\jquery-3.3.1.js" />
+    <Content Include="Content\iziToast-master\assets\jquery\js\jquery-3.3.1.min.js" />
+    <Content Include="Content\iziToast-master\dist\css\iziToast.css" />
+    <Content Include="Content\iziToast-master\dist\css\iziToast.min.css" />
+    <Content Include="Content\iziToast-master\dist\js\iziToast.js" />
+    <Content Include="Content\iziToast-master\dist\js\iziToast.min.js" />
+    <Content Include="Content\iziToast-master\index.html" />
+    <Content Include="Content\iziToast-master\PWeb.txt" />
+    <Content Include="Content\iziToast-master\src\js\iziToast.js" />
+    <Content Include="Content\materialize\lks\css\icon1.png" />
+    <Content Include="Content\materialize\lks\css\icon2.png" />
+    <Content Include="Content\materialize\lks\css\materialize.lks.css" />
+    <Content Include="Content\materialize\lks\css\materialize.lks_cambiando.css" />
+    <Content Include="Content\materialize\materialize.css" />
+    <Content Include="Content\materialize\materialize.input.css" />
+    <Content Include="Content\materialize\materialize.input.original.css" />
+    <Content Include="Content\materialize\materialize.min.css" />
+    <Content Include="Content\materialize\materialize.original.css" />
+    <Content Include="Content\menu_nivel\css\style.css" />
+    <Content Include="Content\menu_nivel\img\111.png" />
+    <Content Include="Content\menu_nivel\img\1415675890_folder_find.png" />
+    <Content Include="Content\menu_nivel\img\2.png" />
+    <Content Include="Content\menu_nivel\img\3.png" />
+    <Content Include="Content\menu_nivel\img\333.png" />
+    <Content Include="Content\menu_nivel\img\4.png" />
+    <Content Include="Content\menu_nivel\img\444.png" />
+    <Content Include="Content\menu_nivel\img\eliminar.png" />
+    <Content Include="Content\menu_nivel\img\folder-horizontal-open.png" />
+    <Content Include="Content\menu_nivel\img\folder-horizontal.png" />
+    <Content Include="Content\menu_nivel\img\folder_share.png" />
+    <Content Include="Content\menu_nivel\img\pbo_block.bmp" />
+    <Content Include="Content\menu_nivel\img\tag.png" />
+    <Content Include="Content\menu_nivel\js\jquery-2.1.4.js" />
+    <Content Include="Content\menu_nivel\js\main.js" />
+    <Content Include="Content\menu_nivel\js\modernizr.js" />
+    <Content Include="Content\scroll\css\jquery.mCustomScrollbar.css" />
+    <Content Include="Content\scroll\css\style.css" />
+    <Content Include="Content\scroll\index.html" />
+    <Content Include="Content\scroll\js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="Content\select2\1.png" />
+    <Content Include="Content\select2\i18n\es.js" />
+    <Content Include="Content\select2\select2.css" />
+    <Content Include="Content\select2\select2.full.js" />
+    <Content Include="Content\select2\select2_.css" />
+    <Content Include="Content\select\css\1.png" />
+    <Content Include="Content\select\css\1_.png" />
+    <Content Include="Content\select\css\1__.png" />
+    <Content Include="Content\select\css\1___.png" />
+    <Content Include="Content\select\css\1____.png" />
+    <Content Include="Content\select\css\2.png" />
+    <Content Include="Content\select\css\chosen - Original.css" />
+    <Content Include="Content\select\css\chosen - st-1.css" />
+    <Content Include="Content\select\css\chosen - st-3.css" />
+    <Content Include="Content\select\css\chosen-sprite%402x.png" />
+    <Content Include="Content\select\css\chosen-sprite.png" />
+    <Content Include="Content\select\css\chosen.css" />
+    <Content Include="Content\select\index.html" />
+    <Content Include="Content\select\js\chosen.jquery.js" />
+    <Content Include="Content\select\js\init.js" />
+    <Content Include="Content\select\js\jquery-1.12.4.min.js" />
+    <Content Include="Content\select\js\jquery-3.2.1.min.js" />
+    <Content Include="Content\sweetalert\sweetalert-dev.js" />
+    <Content Include="Content\sweetalert\sweetalert.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="images\6a00d83451b9ae69e200e54f418eeb8834-800wi.jpg" />
+    <Content Include="images\admiracion.svg" />
+    <Content Include="images\anular_1.svg" />
+    <Content Include="images\anular_2.svg" />
+    <Content Include="images\anular_3.svg" />
+    <Content Include="images\anular_4.svg" />
+    <Content Include="images\anular_5.svg" />
+    <Content Include="images\aplicaciones\adm_1.png" />
+    <Content Include="images\aplicaciones\alm_1.png" />
+    <Content Include="images\aplicaciones\alm_2.png" />
+    <Content Include="images\aplicaciones\com_1.png" />
+    <Content Include="images\aplicaciones\ctas_1.png" />
+    <Content Include="images\aplicaciones\emp_1.png" />
+    <Content Include="images\aplicaciones\emp_2.png" />
+    <Content Include="images\aplicaciones\tes_1.png" />
+    <Content Include="images\aplicaciones\ven_1.png" />
+    <Content Include="images\cd-icons.svg" />
+    <Content Include="images\default-avatar.jpg" />
+    <Content Include="images\download_01.png" />
+    <Content Include="images\excel.svg" />
+    <Content Include="images\excel_02.png" />
+    <Content Include="images\export_01.svg" />
+    <Content Include="images\fondos\login_1.svg" />
+    <Content Include="images\fondos\sidebar-header_1.svg" />
+    <Content Include="images\footer-blog2.jpg" />
+    <Content Include="images\iconos\1.png" />
+    <Content Include="images\iconos\2.png" />
+    <Content Include="images\iconos\3.png" />
+    <Content Include="images\iconos\4.png" />
+    <Content Include="images\iconos\5.png" />
+    <Content Include="images\iconos\6.png" />
+    <Content Include="images\iconos\7.png" />
+    <Content Include="images\iconos\8.png" />
+    <Content Include="images\iconos\9.png" />
+    <Content Include="images\iconos\eliminar.png" />
+    <Content Include="images\iconos\help_1.png" />
+    <Content Include="images\iconos\left_arrow.png" />
+    <Content Include="images\iconos\right_arrow.png" />
+    <Content Include="images\iconos\x_01.png" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\fonts\lato\S6u8w4BMUTPHh30AUi-qJCY.woff2" />
+    <Content Include="Content\fonts\fonts\lato\S6u8w4BMUTPHh30AXC-q.woff2" />
+    <Content Include="Content\fonts\fonts\lato\S6u9w4BMUTPHh50XSwaPGR_p.woff2" />
+    <Content Include="Content\fonts\fonts\lato\S6u9w4BMUTPHh50XSwiPGQ.woff2" />
+    <Content Include="Content\fonts\fonts\lato\S6u9w4BMUTPHh6UVSwaPGR_p.woff2" />
+    <Content Include="Content\fonts\fonts\lato\S6u9w4BMUTPHh6UVSwiPGQ.woff2" />
+    <Content Include="Content\fonts\fonts\lato\S6u9w4BMUTPHh7USSwaPGR_p.woff2" />
+    <Content Include="Content\fonts\fonts\lato\S6u9w4BMUTPHh7USSwiPGQ.woff2" />
+    <Content Include="Content\fonts\fonts\lato\S6uyw4BMUTPHjx4wXg.woff2" />
+    <Content Include="Content\fonts\fonts\lato\S6uyw4BMUTPHjxAwXjeu.woff2" />
+    <Content Include="Content\fonts\fonts\material_icons\flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2" />
+    <Content Include="Content\fonts\fonts\merienda\v7\gNMHW3x8Qoy5_mf8uWMFMIo.woff2" />
+    <Content Include="Content\fonts\fonts\merienda\v7\gNMHW3x8Qoy5_mf8uWMLMIqK_Q.woff2" />
+    <Content Include="Content\fonts\fonts\open_sans\mem8YaGs126MiZpBA-UFUZ0bbck.woff2" />
+    <Content Include="Content\fonts\fonts\open_sans\mem8YaGs126MiZpBA-UFVp0bbck.woff2" />
+    <Content Include="Content\fonts\fonts\open_sans\mem8YaGs126MiZpBA-UFVZ0b.woff2" />
+    <Content Include="Content\fonts\fonts\open_sans\mem8YaGs126MiZpBA-UFW50bbck.woff2" />
+    <Content Include="Content\fonts\fonts\open_sans\mem8YaGs126MiZpBA-UFWJ0bbck.woff2" />
+    <Content Include="Content\fonts\fonts\open_sans\mem8YaGs126MiZpBA-UFWp0bbck.woff2" />
+    <Content Include="Content\fonts\fonts\open_sans\mem8YaGs126MiZpBA-UFWZ0bbck.woff2" />
+    <Content Include="Content\fonts\fonts\toolkit-entypo\toolkit-entypo.eot" />
+    <Content Include="Content\fonts\fonts\toolkit-entypo\toolkit-entypo.ttf" />
+    <Content Include="Content\fonts\fonts\toolkit-entypo\toolkit-entypo.woff" />
+    <Content Include="Content\fonts\fonts\toolkit-entypo\toolkit-entypo.woff2" />
+    <Content Include="Content\fonts\fonts\varela\varela-round.regular.ttf" />
+    <Content Include="Content\menu_nivel\img\cd-icons.svg" />
+    <Content Include="Content\iziToast-master\src\css\animations.styl" />
+    <Content Include="Content\iziToast-master\src\css\layouts.styl" />
+    <Content Include="Content\iziToast-master\src\css\style.styl" />
+    <Content Include="Content\iziToast-master\src\css\themes.styl" />
+    <Content Include="Content\iziToast-master\src\css\toast.styl" />
+    <Content Include="Content\enjoyhint\fonts\Casino_Hand\casino_hand-webfont.eot" />
+    <Content Include="Content\enjoyhint\fonts\Casino_Hand\casino_hand-webfont.svg" />
+    <Content Include="Content\enjoyhint\fonts\Casino_Hand\casino_hand-webfont.ttf" />
+    <Content Include="Content\enjoyhint\fonts\Casino_Hand\casino_hand-webfont.woff" />
+    <Content Include="Content\images\admiracion.svg" />
+    <Content Include="Content\images\anular_1.svg" />
+    <Content Include="Content\images\anular_2.svg" />
+    <Content Include="Content\images\anular_3.svg" />
+    <Content Include="Content\images\anular_4.svg" />
+    <Content Include="Content\images\anular_5.svg" />
+    <Content Include="Content\images\cd-icons - copia.svg" />
+    <Content Include="Content\images\cd-icons.svg" />
+    <Content Include="Content\images\excel.svg" />
+    <Content Include="Content\images\export_01.svg" />
+    <Content Include="Content\images\fondos\login_1.svg" />
+    <Content Include="Content\images\fondos\sidebar-header_1.svg" />
+    <Content Include="Content\images\otros\empty-state-charts.svg" />
+    <Content Include="Content\images\otros\iconfinder_068_Cancel_183197.svg" />
+    <Content Include="Content\images\preliminar_1.svg" />
+    <Content Include="Content\images\preliminar_11.svg" />
+    <Content Include="Content\images\print_1.svg" />
+    <Content Include="Content\images\print_2.svg" />
+    <Content Include="Content\images\print_3.svg" />
+    <Content Include="Content\images\save_1.svg" />
+    <Content Include="Content\images\save_2.svg" />
+    <Content Include="Content\images\svg\bd_griss\archive_01.svg" />
+    <Content Include="Content\images\svg\bd_griss\check_01.svg" />
+    <Content Include="Content\images\svg\bd_griss\injection_01.svg" />
+    <Content Include="Content\images\svg\bd_griss\link_01.svg" />
+    <Content Include="Content\images\svg\bd_griss\shape_01.svg" />
+    <Content Include="Content\images\svg\bd_griss\shipping_01.svg" />
+    <Content Include="Content\images\svg\bd_griss\view thumbnail_01.svg" />
+    <Content Include="Content\images\svg\bd_griss\zoom_01.svg" />
+    <Content Include="Content\images\svg\bd_white\cancel_01.svg" />
+    <Content Include="Content\images\svg\bd_white\cancel_02.svg" />
+    <Content Include="Content\images\svg\bd_white\check_01.svg" />
+    <Content Include="Content\images\svg\bd_white\delete_01.svg" />
+    <Content Include="Content\images\svg\bd_white\delete_02.svg" />
+    <Content Include="Content\images\svg\bd_white\printer_01.svg" />
+    <Content Include="Content\images\svg\bd_white\shipping_01.svg" />
+    <Content Include="Content\images\svg\bd_white\undo_01.svg" />
+    <Content Include="Content\images\svg\others\user_remove_01.svg" />
+    <Content Include="Content\images\undo_1.svg" />
+    <Content Include="Content\images\vectorpaint.svg" />
+    <Content Include="Content\images\vectorpaint_.svg" />
+    <Content Include="Content\images\vectorpaint_2.svg" />
+    <None Include="Properties\PublishProfiles\WebRental.pubxml" />
+    <Content Include="images\logos\logo_1.png" />
+    <Content Include="images\materialize\1.png" />
+    <Content Include="images\materialize\2.png" />
+    <Content Include="images\materialize\4.png" />
+    <Content Include="images\more.png" />
+    <Content Include="images\more0.png" />
+    <Content Include="images\more00.png" />
+    <Content Include="images\more11.png" />
+    <Content Include="images\more2.png" />
+    <Content Include="images\new_1.png" />
+    <Content Include="images\new_2.png" />
+    <Content Include="images\Nueva carpeta\00.png" />
+    <Content Include="images\Nueva carpeta\001.png" />
+    <Content Include="images\Nueva carpeta\002.png" />
+    <Content Include="images\Nueva carpeta\111.png" />
+    <Content Include="images\Nueva carpeta\22222.png" />
+    <Content Include="images\Nueva carpeta\2222222.png" />
+    <Content Include="images\Nueva carpeta\2222222222.png" />
+    <Content Include="images\Nueva carpeta\6.png" />
+    <Content Include="images\Nueva carpeta\666.png" />
+    <Content Include="images\Nueva carpeta\66666.jpg" />
+    <Content Include="images\Nueva carpeta\777.png" />
+    <Content Include="images\Nueva carpeta\77777777.png" />
+    <Content Include="images\Nueva carpeta\cogwheel %2813%29.png" />
+    <Content Include="images\Nueva carpeta\e1 - copia.jpg" />
+    <Content Include="images\Nueva carpeta\eliminar.png" />
+    <Content Include="images\Nueva carpeta\h1.png" />
+    <Content Include="images\Nueva carpeta\h2.png" />
+    <Content Include="images\Nueva carpeta\i1.png" />
+    <Content Include="images\Nueva carpeta\icon0.png" />
+    <Content Include="images\Nueva carpeta\icon00.png" />
+    <Content Include="images\Nueva carpeta\icon1.png" />
+    <Content Include="images\Nueva carpeta\icon2.png" />
+    <Content Include="images\Nueva carpeta\iconfinder_068_Cancel_183197.svg" />
+    <Content Include="images\Nueva carpeta\n2.png" />
+    <Content Include="images\Nueva carpeta\n4.png" />
+    <Content Include="images\Nueva carpeta\n5.png" />
+    <Content Include="images\Nueva carpeta\n6.png" />
+    <Content Include="images\Nueva carpeta\payment-method %286%29.png" />
+    <Content Include="images\Nueva carpeta\remove-button.png" />
+    <Content Include="images\Nueva carpeta\sdf.png" />
+    <Content Include="images\Nueva carpeta\settings %2828%29.png" />
+    <Content Include="images\Nueva carpeta\settings %2867%29.png" />
+    <Content Include="images\Nueva carpeta\u1.png" />
+    <Content Include="images\opciones\eliminar_01.png" />
+    <Content Include="images\preliminar_1.svg" />
+    <Content Include="images\preliminar_11.svg" />
+    <Content Include="images\print_1.svg" />
+    <Content Include="images\print_2.svg" />
+    <Content Include="images\print_3.svg" />
+    <Content Include="images\save_1.svg" />
+    <Content Include="images\save_2.svg" />
+    <Content Include="images\svg\bd_griss\archive_01.svg" />
+    <Content Include="images\svg\bd_griss\check_01.svg" />
+    <Content Include="images\svg\bd_griss\injection_01.svg" />
+    <Content Include="images\svg\bd_griss\link_01.svg" />
+    <Content Include="images\svg\bd_griss\shape_01.svg" />
+    <Content Include="images\svg\bd_griss\shipping_01.svg" />
+    <Content Include="images\svg\bd_griss\view thumbnail_01.svg" />
+    <Content Include="images\svg\bd_griss\zoom_01.svg" />
+    <Content Include="images\svg\bd_white\cancel_01.svg" />
+    <Content Include="images\svg\bd_white\cancel_02.svg" />
+    <Content Include="images\svg\bd_white\check_01.svg" />
+    <Content Include="images\svg\bd_white\delete_01.svg" />
+    <Content Include="images\svg\bd_white\delete_02.svg" />
+    <Content Include="images\svg\bd_white\printer_01.svg" />
+    <Content Include="images\svg\bd_white\shipping_01.svg" />
+    <Content Include="images\svg\bd_white\undo_01.svg" />
+    <Content Include="images\svg\others\user_remove_01.svg" />
+    <Content Include="images\undo_1.svg" />
+    <Content Include="images\usuarios\ninguno_1.gif" />
+    <Content Include="images\vectorpaint.svg" />
+    <Content Include="images\vectorpaint_.svg" />
+    <Content Include="images\vectorpaint_2.svg" />
+    <Content Include="Scripts\dataTables.keyTable.js" />
+    <Content Include="Scripts\dataTables.keyTable.min.js" />
+    <Content Include="Scripts\jquery-ui\jquery-ui.js" />
+    <Content Include="Scripts\jquery.hotkeys\jquery.hotkeys.js" />
+    <Content Include="Scripts\jquery\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\lks\frm_al_it.js" />
+    <Content Include="Scripts\lks\frm_fa.js" />
+    <Content Include="Scripts\lks\funciones.lks.js" />
+    <Content Include="Scripts\lks\lks.datatables.js" />
+    <Content Include="Scripts\lks\lks.datatables_detalles.js" />
+    <Content Include="Scripts\lks\lks.objects.js" />
+    <Content Include="Scripts\lks\lks.transaccion.js" />
+    <Content Include="Scripts\lks\mdl_dir.js" />
+    <Content Include="Scripts\lks\mdl_it.js" />
+    <Content Include="Scripts\lks\mdl_mon.js" />
+    <Content Include="Scripts\lks\mdl_personas.js" />
+    <Content Include="Scripts\lks\mdl_ubdst.js" />
+    <Content Include="Scripts\materialize\materialize.js" />
+    <Content Include="Scripts\materialize\materialize.min.js" />
+    <Content Include="Scripts\numeral\cdns.txt" />
+    <Content Include="Scripts\numeral\Numeral-js-master\Gruntfile.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\karma-ci.conf.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\bg.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\chs.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\cs.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\da-dk.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\de-ch.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\de.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\en-au.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\en-gb.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\en-za.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\es-es.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\es.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\et.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\fi.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\fr-ca.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\fr-ch.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\fr.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\hu.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\it.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\ja.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\lv.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\nl-be.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\nl-nl.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\no.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\pl.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\pt-br.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\pt-pt.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\ru-ua.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\ru.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\sk.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\sl.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\th.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\tr.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\uk-ua.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\locales\vi.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\be-nl.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\bg.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\chs.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\cs.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\da-dk.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\de-ch.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\de.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\en-au.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\en-gb.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\en-za.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\es-es.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\es.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\et.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\fi.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\fr-ca.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\fr-ch.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\fr.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\hu.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\it.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\ja.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\lv.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\nl-be.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\nl-nl.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\no.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\pl.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\pt-br.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\pt-pt.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\ru-ua.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\ru.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\sk.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\sl.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\th.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\tr.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\uk-ua.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\locales\vi.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\min\numeral.min.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\numeral.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\formats\bps.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\formats\bytes.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\formats\currency.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\formats\exponential.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\formats\ordinal.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\formats\percentage.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\formats\time.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\bg.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\chs.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\cs.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\da-dk.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\de-ch.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\de.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\en-au.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\en-gb.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\en-za.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\es-es.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\es.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\et.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\fi.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\fr-ca.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\fr-ch.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\fr.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\hu.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\it.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\ja.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\lv.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\nl-be.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\nl-nl.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\no.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\pl.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\pt-br.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\pt-pt.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\ru-ua.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\ru.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\sk.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\sl.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\th.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\tr.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\uk-ua.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\locales\vi.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\src\numeral.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\templates\anon.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\templates\types.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\formats\bps.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\formats\bytes.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\formats\currency.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\formats\exponential.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\formats\ordinal.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\formats\percentage.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\formats\time.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\bg.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\chs.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\cs.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\da-dk.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\de-ch.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\de.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\en-au.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\en-gb.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\en-za.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\es-es.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\es.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\et.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\fi.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\fr-ca.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\fr-ch.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\fr.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\hu.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\it.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\ja.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\lv.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\nl-be.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\nl-nl.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\no.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\pl.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\pt-br.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\pt-pt.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\ru-ua.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\ru.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\sk.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\sl.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\th.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\tr.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\uk-ua.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\locales\vi.js" />
+    <Content Include="Scripts\numeral\Numeral-js-master\tests\numeral.js" />
+    <Content Include="Scripts\numeral\numeral.js" />
+    <Content Include="Scripts\numeral\numeral.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Shared\_LayoutAuthentication.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AuthenticationController.cs" />
+    <Compile Include="Controllers\ErrorPageController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MaintenancePageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Views\Shared\_LayoutMaster.cshtml" />
+    <Content Include="Views\Shared\_LayoutOtherPages.cshtml" />
+    <Content Include="Views\ErrorPage\Index.cshtml" />
+    <Content Include="Views\MaintenancePage\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Authentication\Login.cshtml" />
+    <Content Include="Scripts\numeral\Numeral-js-master\.gitignore" />
+    <Content Include="Scripts\numeral\Numeral-js-master\.travis.yml" />
+    <Content Include="Scripts\numeral\Numeral-js-master\bower.json" />
+    <Content Include="Scripts\numeral\Numeral-js-master\component.json" />
+    <Content Include="Scripts\numeral\Numeral-js-master\LICENSE" />
+    <Content Include="Scripts\numeral\Numeral-js-master\package.json" />
+    <Content Include="Scripts\numeral\Numeral-js-master\README.md" />
+    <Content Include="Views\Home\ventas.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\iziToast-master\assets\jquery\css\" />
+    <Folder Include="Content\materialize\lks\js\" />
+    <Folder Include="Filters\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Centrix.BusinessLogic\Centrix.BusinessLogic.csproj">
+      <Project>{91c308d8-aebe-427a-973d-a93bcd84ad27}</Project>
+      <Name>Centrix.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Centrix.Common\Centrix.Common.csproj">
+      <Project>{6ba0dfb5-4507-4c99-81ca-35c6d5f8e560}</Project>
+      <Name>Centrix.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Centrix.DataAccess\Centrix.DataAccess.csproj">
+      <Project>{CB27969C-E044-4D27-9C01-3FD3EC239266}</Project>
+      <Name>Centrix.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Centrix.Entity\Centrix.Entity.csproj">
+      <Project>{ba5de63d-9c4b-48b0-af87-6842964ba825}</Project>
+      <Name>Centrix.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Centrix.Library\Centrix.Library.csproj">
+      <Project>{1C6E2B4F-8D4E-41EA-97BA-50DA4C9398BD}</Project>
+      <Name>Centrix.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Content\iziToast-master\types\index.d.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>19585</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48458/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

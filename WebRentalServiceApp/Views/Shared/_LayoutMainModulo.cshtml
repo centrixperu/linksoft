@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<!--<html lang="es" xml:lang="es">-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>SOFTWARE S7</title>
+    @*<link rel="icon" href="@Url.Content("~/Content/images/ap8.png")" />*@
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundlesbefore/lib")
+
+	<script type="text/javascript" src="../../scripts/lks/shortcut.js"></script>
+</head>
+
+<body class="frm_main overflow_hidden">
+
+	<div id="contenedor_carga">
+		<div class="loader-four center">
+			<div class='dice'>
+				<div class="side one"></div>
+				<div class="side two"></div>
+				<div class="side three"></div>
+				<div class="side four"></div>
+				<div class="side five"></div>
+				<div class="side six"></div>
+			</div>
+		</div>
+	</div>
+ 
+    <div class="container">
+		@RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundlesafter/lib")
+    @RenderSection("scripts", required: false)
+    @RenderSection("Styles", false)
+
+	<script>fc__frm_layout__tipo = 'Main_Modulo';</script>
+	<script type="text/javascript" src="../../scripts/lks/frm_layout.js"></script>
+	
+</body>
+</html>

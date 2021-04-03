@@ -1,0 +1,348 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<form id='form_main'>
+
+	<div id="tab_1" class="col s12 st_lks container_ft_1 height_-137px div_container" data-col="scroll_tab_1" data-col_2="div_width_-5px">
+
+		<div class='col s12 sub_container'>
+		
+			<div class="col s12 m12 l6 xl6">
+				<section>
+
+					<div class="row" style='height: 47px;'>
+						<div class="col s12" style='height: 20px;'>
+							<div class='col_label_head'>Datos generales</div>
+						</div>
+						<div class='lks switch'>
+							<label>
+								<span>Estado</span>
+								<input type='checkbox' class='show_cest' data-col='cest' data-hb_v='n' data-hb_n='s' data-hb_e='s' />
+								<span class='lever'></span>
+							</label>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='prs_csf'>Clasificación</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_prs_csf' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<select class="select2 s2" data-col='prs_csf' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='prs_tip'>Tipo de Persona</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_prs_tip' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<select class="select2 s2" data-col='prs_tip' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s4">
+							<div class='col_label' data-col_dsc='ccod_prs'>Código</div>
+							<input type="text" placeholder="" value="" class='lks' data-col='ccod_prs' data-hb_v="n" data-hb_n="s" data-hb_e="s" required />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label' data-col_dsc='cdsc_prs'>Descripción</div>
+							<input type="text" placeholder="" value="" class='lks' data-col='cdsc_prs' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+						</div>
+					</div>
+					<div class="row prs_tip_j">
+						<div class="col s12">
+							<div class='col_label' data-col_dsc='cnom_comercial'>Nombre Comercial</div>
+							<input type="text" placeholder="" value="" class='lks' data-col='cnom_comercial' data-hb_v="n" data-hb_n="s" data-hb_e="s" />
+						</div>
+					</div>
+				</section>
+				<section class='prs_tip_f'>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label_head'>Persona natural</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s6">
+							<div class='col_label' data-col_dsc='cape_pat'>Apellido Paterno</div>
+							<input type="text" class='lks ft_upper' autocomplete="off" placeholder="" value="" data-col='cape_pat' data-hb_v="n" data-hb_n="s" data-hb_e="s" required />
+						</div>
+						<div class="col s6">
+							<div class='col_label' data-col_dsc='cape_mat'>Apellido Materno</div>
+							<input type="text" class='lks ft_upper' autocomplete="off" placeholder="" value="" data-col='cape_mat' data-hb_v="n" data-hb_n="s" data-hb_e="s" required />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s6">
+							<div class='col_label' data-col_dsc='cnom'>Nombre(s)</div>
+							<input type="text" class='lks ft_title' autocomplete="off" placeholder="" value="" data-col='cnom' data-hb_v="n" data-hb_n="s" data-hb_e="s" required />
+						</div>
+						<div class="col s6">
+							<div class='col_label' data-col_dsc='cape_cas'>Apellido Casada</div>
+							<input type="text" class='lks ft_upper' autocomplete="off" placeholder="" value="" data-col='cape_cas' data-hb_v="n" data-hb_n="s" data-hb_e="s" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s6">
+							<div class='col_label' data-col_dsc='tsx'>Sexo</div>
+							<select class='select2 s2' data-col='tsx' data-allow-clear='true' data-hb_v='n' data-hb_n='s' data-hb_e='s'></select>
+						</div>
+						<div class="col s6">
+							<div class='col_label' data-col_dsc='dfch_nac'>Fecha Nacimiento</div>
+							<input type='text' autocomplete="off" placeholder='' value='' class='lks' data-col='dfch_nac' data-hb_v='n' data-hb_n='s' data-hb_e='s' />
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<div class="col s12 m12 l6 xl6">
+				<section>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label_head'>
+								<label data-lnk='_lnk_add_row_doc' data-hb_v='n' data-hb_n='s' data-hb_e='s'>Documentos</label>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row data-row_head display_none" id='title_row_doc'>
+					<!-- <div class="row data-row_head"> -->
+						<!-- <div class='col s12 ft_sc'> -->
+							<div class='col s8' data-col_before='s7' data-col_after='s8'>
+								<div class='col_label' data-col_dsc='it_tip'>Tipo de Documento</div>
+							</div>
+							<div class='col s4'>
+								<div class='col_label' data-col_dsc='it_tip'>Número de Documento</div>
+							</div>
+						<!-- </div> -->
+					</div>
+					<div data-rows='doc'></div>
+				</section>				
+				
+				<section>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label_head'>
+								<label data-lnk='_lnk_nueva_dir' data-hb_v='n' data-hb_n='s' data-hb_e='s'>Direcciones</label>
+							</div>
+						</div>
+					</div>
+					<div data-rows='dir'></div>
+				</section>
+					
+				<section>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label_head'>
+								<label data-lnk='_lnk_add_row_mdc' data-hb_v='n' data-hb_n='s' data-hb_e='s'>Medios de Contacto</label>
+							</div>
+						</div>
+					</div>
+					<div class='row data-row_head display_none' id='title_row_mdc'>
+						<!-- <div class='col s12 ft_sc'> -->
+							<div class='col s4'>
+								<div class='col_label' data-col_dsc='it_tip'>Tipo de Medio</div>
+							</div>
+							<div class='col s8' data-col_before='s7' data-col_after='s8'>
+								<div class='col_label' data-col_dsc='it_tip'>Descripción</div>
+							</div>
+						<!-- </div> -->
+					</div>
+					<div data-rows='mdc'></div>
+				</section>
+
+			</div>
+
+		</div>
+	
+	</div>
+
+</form>
+
+<div id="mdl_dir" class="modal modal-fixed-footer_ft_1 width_55 height_90" data-button_close='out'>
+    <header class="modal_header">
+        <div class="modal_header_inner">
+            <h3 class='m-all-0'>Dirección</h3>
+        </div>
+    </header>
+
+	<form id="form_direccion" class="height_-69px" onsubmit='return false;'>
+		<div class='modal-content st_lks height_-50px'>
+		
+			<div class="col s12 sub_container full_height">
+			
+				<div class="col s12 full_height">
+					
+					<section class='ft_1'>
+						<div class='row'>
+							<div class="col s12">
+								<div class='col_label'>Persona</div>
+							</div>
+							<div class="col s3 hide_for_1200px">
+								<input type='text' placeholder='' value='' class='lks' data-col='ccod_prs' data-vw readonly />
+							</div>
+							<div class="col s12 m12 l12 xl9">
+								<input type='text' placeholder='' value='' class='lks' data-col='cdsc_prs' data-vw readonly />
+							</div>
+						</div>
+					</section>
+					
+					<section class='ft_1'>
+						<div class="row">
+							<div class="col s12">
+								<div class='col_label'>Dirección</div>
+								<input type='text' placeholder='' value='' class='lks' data-col='cdsc_dir' data-hb_v='n' data-hb_n='n' data-hb_e='n' />
+							</div>
+						</div>
+					</section>
+
+					<!-- <div class="modal-sub-content p-right-15 div_width_15px" data-col="scroll_div_mdl_grid_it_1" data-col_2="div_width_10px"> -->
+					<div class="modal-sub-content height_-175px" data-col="scroll_div_mdl_grid_it_1" data-col_2="div_width_10px">
+					
+						<section class='ft_1'>
+						
+							<div class="row" style='height: 50px;'>
+								<div class="col s12" style='height: 22px;'>
+									<div class='col_label_head'>Detalles de la dirección</div>
+								</div>
+								
+								<div class='lks switch'>
+									<label>
+										<span>Estado</span>
+										<input type='checkbox' class='show_cest' data-col='cest' data-hb_v='n' data-hb_n='s' data-hb_e='s' />
+										<span class='lever'></span>
+									</label>
+								</div>
+							</div>
+							
+							<div class='row row-ft2'>
+								<div class='col s12'>
+									<div id='c_c_mdl_dir_bpdt' style='margin-top: 0px; margin-bottom: 5px;'>
+										<label>
+											<input type='checkbox' class='filled-in checkbox-left' data-col='bpdt' data-vs_v='n' data-vs_n='s' data-vs_e='s' data-hb_v='n' data-hb_n='s' data-hb_e='s' />
+											<span>Predeterminado</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							
+							<div class='row'>
+								<div class="col s4">
+									<div class='col_label'>Tipo de Vía</div>
+									<select class='select2 s2' data-col='dir_tpv' data-allow-clear='false' data-hb_v='n' data-hb_n='s' data-hb_e='s' data-zi='mdl_dir' required></select>
+								</div>
+								<div class="col s6">
+									<div class='col_label'>Descripción de Vía</div>
+									<input type='text' placeholder='' value='' class='lks ft_title' data-col='cdsc_via' data-hb_v='n' data-hb_n='s' data-hb_e='s' required />
+								</div>
+								<div class="col s2">
+									<div class='col_label'>Número</div>
+									<input type='text' placeholder='' value='' class='lks' data-col='cnum' data-clear='n' data-hb_v='n' data-hb_n='s' data-hb_e='s' required />
+								</div>
+							</div>
+							
+							<div class='row'>
+								<div class="col s4">
+									<div class='col_label'>Tipo de Zona</div>
+									<select class='select2 s2' data-col='dir_tpz' data-hb_v='n' data-hb_n='s' data-hb_e='s' data-zi='mdl_dir'></select>
+								</div>
+								<div class="col s8">
+									<div class='col_label'>Descripción de Zona</div>
+									<input type='text' placeholder='' value='' class='lks ft_title' data-col='cdsc_zon' data-hb_v='n' data-hb_n='s' data-hb_e='s' />
+								</div>
+							</div>
+							
+							<div class='row'>
+								<div class="col s4">
+									<div class='col_label' data-lnk="_lnk_search_dst" data-hb_v="n" data-hb_n="s" data-hb_e="s">Distrito</div>
+									<input type='text' placeholder='' value='' class='lks' data-col='cdsc_dir_dst' data-hb_v='n' data-hb_n='n' data-hb_e='n' />
+								</div>
+								<div class="col s4">
+									<div class='col_label'>Provincia</div>
+									<input type='text' placeholder='' value='' class='lks' data-col='cdsc_dir_prv' data-hb_v='n' data-hb_n='n' data-hb_e='n' />
+								</div>
+								<div class="col s4">
+									<div class='col_label'>Departamento</div>
+									<input type='text' placeholder='' value='' class='lks' data-col='cdsc_dir_dpt' data-hb_v='n' data-hb_n='n' data-hb_e='n' />
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col s12">
+									<div class='col_label'>Referencia</div>
+									<input type='text' placeholder='' value='' class='lks ft_letter' data-col='cref' data-hb_v='n' data-hb_n='s' data-hb_e='s' />
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col s12">
+									<div class='col_label'>Observaciones</div>
+									<input type='text' placeholder='' value='' class='lks ft_letter' data-col='cobs' data-hb_v='n' data-hb_n='s' data-hb_e='s' />
+								</div>
+							</div>
+							
+							<div class='row_dynamic_title'>
+								<div class='row row-ft2'>
+									<div class='col s12'>
+										<label class='label_header' data-lnk='_lnk_add_row_dir_det' data-hb_v='n' data-hb_n='s' data-hb_e='s'>Otros detalles de la dirección</label>
+										<div class='separator'></div>
+									</div>
+								</div>
+								<!--
+								<div class='row ft_2 st-1 ft_sc'>
+									<div class='col s12'>
+										<label class='col_label_head' data-lnk='_lnk_add_row_dir_det' data-hb_v='n' data-hb_n='s' data-hb_e='s'>Otros detalles de la dirección</label>
+										<div class='sp'></div>
+									</div>
+								</div>
+								-->
+							</div>
+							<!--
+							<div class='row ft_2 st-1 data-row_head display_none'>
+								<div class='col s12 ft_sc'>
+									<div class='col s6'>
+										<label data-col_dsc='it_tip'>Detalle</label>
+									</div>
+									<div class='col s6' data-col_before='s5' data-col_after='s6'>
+										<label data-col_dsc='it_tip'>Descripción</label>
+									</div>
+								</div>
+							</div>
+							-->
+							<div class='ft_sc' data-rows='dir_det'></div>
+						</section>
+
+					</div>
+				
+				</div>
+			
+			</div>
+
+		</div>
+
+		<div class="modal-footer">
+			<button class='button-1 waves-effect' data-lnk='_lnk_mdl_dir_aceptar' data-vs_v='n' data-vs_n='s' data-vs_e='s'>Aceptar</button>
+			<button class="button-1 waves-effect modal-close">Cancelar</button>
+		</div>
+	</form>
+</div>
+
+@section scripts
+{
+<script type="text/javascript" src="../../scripts/lks/frm_em_ct_prs.js"></script>
+<script type="text/javascript" src="../../scripts/lks/frm_em_dt_dir.js"></script>
+}

@@ -1,0 +1,1331 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<!-- <a class="btn-floating btn-large waves-effect waves-light btn-green animated fadeInUp display_none" data-lnk='_lnk_registrar_em_prs' style="position: fixed; bottom: 20px; right: 20px; z-index: 1000000000;"><i class="large material-icons">check</i></a> -->
+<!-- <a class="btn-floating btn-large waves-effect waves-light btn-green animated fadeInUp display_none" data-lnk='_lnk_open_modal_prs1' style="position: fixed; bottom: 20px; right: 20px; z-index: 1000000000;"><i class="large material-icons">group_add</i></a> -->
+<a class="btn-floating btn-large_sub waves-effect waves-light btn-green_sub add1_user animated fadeInUp display_none" data-lnk='_lnk_open_modal_prs1' style="position: fixed; bottom: 20px; right: 20px; z-index: 1000000000; box-shadow: none;"></a>
+
+
+
+
+
+
+
+<a class="btn-floating btn-large_sub waves-effect waves-light btn-green_sub add1_cart animated fadeInUp display_none" data-lnk='_lnk_saldos' style="position: fixed; bottom: 20px; right: 20px; z-index: 1000000000; box-shadow: none;" data-vs_v="n" data-vs_n="s" data-vs_e="s"></a>
+<!-- <a class="btn-floating btn-large_sub waves-effect waves-light btn-green_sub add1_cam animated fadeInUp display_none" data-lnk='_lnk_saldos1' style="position: fixed; bottom: 90px; right: 20px; z-index: 1000000000; box-shadow: none;" data-vs_v="n" data-vs_n="s" data-vs_e="s"></a> -->
+
+
+<form id="form_main">
+
+	<div id="tab_1" class="col s12 st_lks container_ft_1 height_-137px div_container" data-col="scroll_tab_1" data-col_2="div_width_-5px">
+
+		<div class='col s12 sub_container'>
+		
+			<div class="col s12 m12 l6 xl6">
+				<section>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label_head'>Resumen</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s3">
+							<div class='col_label'>Empresa</div>
+							<!-- <div class='col_label' data-lnk='_lnk_open_modal_estados' data-hb_v="s" data-hb_n="s" data-hb_e="s">Empresa</div> -->
+							<div data-col='cdsc_est' class='c_span_label'></div>
+						</div>
+						<div class="col s3">
+							<div class='col_label'>Sunat</div>
+							<div data-col='cdsc_est_sn' class='c_span_label'></div>
+						</div>
+						<div class="col s3">
+							<div class='col_label'>Ejercicio</div>
+							<input type="text" placeholder="" value="" class="lks text_align_right" data-col='ccod_eje' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+						</div>
+						<div class="col s3">
+							<div class='col_label'>Período</div>
+							<input type="text" placeholder="" value="" class="lks text_align_right" data-col='ccod_per' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s3">
+							<div class='col_label'>Sub Total</div>
+							<span class="input-csim left">
+								<input type="text" placeholder="" value="" class="lks text_align_right f_imp" data-col='nimp_n_ms' data-vw readonly />
+							</span>
+						</div>
+						<div class="col s3">
+							<div class='col_label' data-lnk='_lnk_open_modal_dsc' data-hb_v="s" data-hb_n="s" data-hb_e="n">Descuentos</div>
+							<span class="input-csim left">
+								<input type="text" placeholder="" value="" class="lks text_align_right f_imp" data-col='nimp_dsc' data-vw readonly />
+							</span>
+						</div>
+						<div class="col s3">
+							<div class='col_label'>Impuestos</div>
+							<span class="input-csim left">
+								<input type="text" placeholder="" value="" class="lks text_align_right f_imp" data-col='nimp_i_ms' data-vw readonly />
+							</span>
+						</div>
+						<div class="col s3">
+							<!-- <div class='col_label font_weight_bold'>Total</div> -->
+							<div class='col_label' data-lnk='_lnk_open_modal_tt' data-hb_v="s" data-hb_n="s" data-hb_e="s">Total</div>
+							<span class="input-csim left">
+								<input placeholder="" value="" type="text" class="lks font_weight_bold text_align_right f_imp" data-col='nimp_t' data-vw readonly />
+							</span>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label_head'>Datos Generales</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s4">
+							<div class='col_label'>Emisión</div>
+							<input type="text" autocomplete="off" placeholder="" value="" class='lks' data-clear="n" data-col='dfch_emi' data-dsc='Fecha de Emisión' data-hb_v="n" data-hb_n="s" data-hb_e="n" data-old_value required />
+						</div>
+						<div class="col s4">
+							<div class='col_label'>Vencimiento</div>
+							<input type="text" autocomplete="off" placeholder="" value="" class='lks' data-col='dfch_venc' data-dsc='Fecha de Vencimiento' data-hb_v="n" data-hb_n="s" data-hb_e="s" required />
+							<!-- <input type="date" class="datepicker" id="pickdate"> -->
+						</div>
+						<div class="col s4">
+							<div class='col_label' data-lnk="_lnk_open_modal_tpc" data-hb_v="s" data-hb_n="s" data-hb_e="s">Moneda</div>
+							<input type="text" placeholder="" value="" class='lks' data-col='cdsc_mon' readonly />
+						</div>
+					</div>
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='opve'>Operación de Venta</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_opve' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<!-- <select class="select2" data-col='opve' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select> -->
+								<select class="select2 s2" data-col='opve' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="n" data-i_ccod required></select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s3 m2 l2 xl2">
+							<div class='col_label'>Documento</div>
+							<input type="text" placeholder="" value="" class='lks' data-col='ccod_doc' readonly />
+						</div>
+						<div class="col s4 m4 l4 xl4">
+							<div class='col_label' data-col_dsc='_drt_ccod_ser'>Serie</div>
+							<!-- <select class="select2" data-col='_drt_ccod_ser' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" required></select> -->
+							<select class="select2 s2" data-col='_drt_ccod_ser' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="n" required></select>
+						</div>
+						<div class="col s5 m6 l6 xl6">
+							<div class='col_label'>Número</div>
+							<input type="text" placeholder="" value="" class='lks' data-col='cdoc_nro' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='alm'>Almacén</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_alm' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<!-- <select class="select2" data-col='alm' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod required></select> -->
+								<select class="select2 s2" data-col='alm' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="n" data-i_ccod required></select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label'>Glosa</div>
+							<!-- <input type="text" placeholder="" value="" class='lks' data-clear="n" data-col='cglosa' data-hb_v="n" data-hb_n="s" data-hb_e="s" /> -->
+							<input type="text" placeholder="" value="" class='lks' data-col='cglosa' data-hb_v="n" data-hb_n="s" data-hb_e="s" />
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<div class="col s12 m12 l6 xl6">
+				<section>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label_head'>Datos del Cliente</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-lnk='_lnk_open_modal_prs' data-col_dsc='ccod_prs' data-hb_v="n" data-hb_n="s" data-hb_e="n">Cliente</div>
+							</div>
+							<div class="col s3 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_prs' data-hb_v="n" data-hb_n="n" data-hb_e="n" required />
+							</div>
+							<div class="col s12 m9 l9 xl9">
+								<input type="text" placeholder="" value="" class='lks' data-col='cdsc_prs' data-hb_v="n" data-hb_n="n" data-hb_e="n" required />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label' data-col_dsc='dir'>Dirección</div>
+							<select class="select2 s2" data-col='dir' data-hb_v="n" data-hb_n="s" data-hb_e="n" required></select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='cdp'>Condición de Pago</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_cdp' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<select class="select2 s2" data-col='cdp' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="n" data-i_ccod required></select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='tbj_ven'>Vendedor</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_tbj_ven' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<select class="select2 s2" data-col='tbj_ven' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod></select>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label_head'>Datos Complementarios</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='uop'>Unidad Operativa</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_uop' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<select class="select2 s2" data-col='uop' data-hb_v="n" data-hb_n="s" data-hb_e="n" data-i_ccod required></select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='zn'>Zona de Venta</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_zn' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<select class="select2 s2" data-col='zn' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod></select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="c_col col s12">
+							<div class="col s12">
+								<div class='col_label' data-col_dsc='tbj_cob'>Cobrador</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_tbj_cob' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<select class="select2 s2" data-col='tbj_cob' data-hb_v="n" data-hb_n="s" data-hb_e="s" data-i_ccod></select>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<div class="col s12 m12 l6 xl6 display_none">
+				<section>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label_head'>Datos Sunat</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label' data-lnk='_lnk_open_modal_email' data-col_dsc='_drt_cemail_sn' data-hb_v="n" data-hb_n="s" data-hb_e="s">Correo Electrónico</div>
+							<select class="select2" data-col='_drt_cemail_sn' data-hb_v="n" data-hb_n="s" data-hb_e="s"></select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<div class='col_label'>Código Hash</div>
+							<input type="text" placeholder="" value="" class='lks' data-col='ccod_hash_sn' data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+						</div>
+					</div>
+				</section>
+			</div>
+		
+		</div>
+	
+	</div>
+
+	<!--
+	ELIMINAR
+	fixed_ft_1__2_rows
+	c_file_fixed_ft_1__2_rows
+	-->
+
+	<div id="tab_2" class="col s12 st_lks container_ft_1 height_-129px div_container" data-col="scroll_tab_2" data-col_2="div_width_-5px">
+
+		<div class="col s12 sub_container full_height">
+
+			<div class="col s12 container_table footer_fixed rows_2_sections__ft_1">
+			<!-- <div class="col s12 container_table rows_2_sections__ft_1"> -->
+			
+				<section class='ft_1'>
+					<div class="row">
+						<div class="c_col col s12 m12 l6 hide_for_600px">
+							<div class="col s4 m4 l3">
+								<div class='col_label'>Identificador</div>
+								<input placeholder="" value="" type="text" class='lks' data-col='ccod_prs' data-vw readonly />
+							</div>
+							<div class="col s8 m8 l9">
+								<div class='col_label'>Descripción</div>
+								<input placeholder="" value="" type="text" class='lks' data-col='cdsc_prs' data-vw readonly />
+							</div>
+						</div>
+						<div class="c_col col s12 m12 l6">
+							<div class="col s4 m2 l2">
+								<div class='col_label'>Documento</div>
+								<input placeholder="" value="" type="text" class='lks' data-col='ccod_doc' data-vw readonly />
+							</div>
+							<div class="col s3 m2 l2">
+								<div class='col_label'>Serie</div>
+								<input placeholder="" value="" type="text" class='lks' data-col='ccod_ser' data-vw readonly />
+							</div>
+							<div class="col s5 m4 l4">
+								<div class='col_label'>Número</div>
+								<input placeholder="" value="" type="text" class='lks' data-col='cdoc_nro' data-vw readonly />
+							</div>
+							<div class="col s3 m4 l4 hide_for_600px">
+								<div class='col_label font_weight_bold'>Total</div>
+								<span class="input-csim left">
+									<input placeholder="" value="" type="text" class="lks font_weight_bold text_align_right f_imp" data-col='nimp_t' data-vw readonly />
+								</span>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class='ft_1'>
+					<div class="row">
+						<div class="col s4 m4 l3 xl2 hide_for_600px" data-col='c_s_grid_it_filtros'>
+							<div class='col_label'>Filtrar por</div>
+						</div>
+						<div class="col s9 m6 l4 xl4">
+							<div class='col_label'>Valor</div>
+							<input class='lks' placeholder="Digite valor a buscar" value="" type="text" data-col="i_filter_grid_it" />
+						</div>
+						<div class="col s3 m2 l5 xl6">
+							<div class='col_label'> </div>
+							<div data-col="c_length_grid_it"></div>
+						</div>
+					</div>
+				</section>
+				<div class="content_table" data-col='scroll_grid_it' data-col_2="p-right-15">
+					<div class="row m-p-all-0">
+						<div class="c_col col s12" data-col="c_grid_it"></div>
+					</div>
+				</div>
+				<div class="dataTables_wrapper" data-col="c_footer_grid_it"></div>
+			</div>
+		
+		</div>
+		
+		
+		
+		<!-- ================================= -->
+		
+		<!-- ================================= -->
+
+		<!--
+		<div class='fixed_ft_1'>
+			<section class='ft_vw no-head'>
+				<div class='row'>
+					<div class="c_col col s12 m12 l6 hide_for_600px">
+						<div class="col s4 m4 l3">
+							<div class='col_label'>Identificador</div>
+							<input placeholder="" value="" type="text" class='lks' data-col='ccod_prs' data-vw readonly />
+						</div>
+						<div class="col s8 m8 l9">
+							<div class='col_label'>Descripción</div>
+							<input placeholder="" value="" type="text" class='lks' data-col='cdsc_prs' data-vw readonly />
+						</div>
+					</div>
+					<div class="c_col col s12 m12 l6">
+						<div class="col s4 m2 l2">
+							<div class='col_label'>Documento</div>
+							<input placeholder="" value="" type="text" class='lks' data-col='ccod_doc' data-vw readonly />
+						</div>
+						<div class="col s3 m2 l2">
+							<div class='col_label'>Serie</div>
+							<input placeholder="" value="" type="text" class='lks' data-col='ccod_ser' data-vw readonly />
+						</div>
+						<div class="col s5 m4 l4">
+							<div class='col_label'>Número</div>
+							<input placeholder="" value="" type="text" class='lks' data-col='cdoc_nro' data-vw readonly />
+						</div>
+						<div class="col s3 m4 l4 hide_for_600px">
+							<div class='col_label font_weight_bold'>Total</div>
+							<span class="input-csim left">
+								<input placeholder="" value="" type="text" class="lks font_weight_bold text_align_right f_imp" data-col='nimp_t' data-vw readonly />
+							</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class='ft_vw'>
+				<div class="row">
+					<div class="col s3" data-col='c_s_grid_it_filtros'>
+						<div class='col_label'>Filtrar por</div>
+					</div>
+					<div class="col s4">
+						<div class='col_label'>Valor</div>
+						<input data-col="i_filter_grid_it" placeholder="Digite valor a buscar" value="" type="text" class='lks' />
+					</div>
+
+					<div class="col s5">
+						<div class='col_label'> </div>
+						<div data-col="c_length_grid_it"></div>
+					</div>
+					
+				</div>
+			</section>
+		</div>
+		
+		<section class='ft_table'>
+			<div class="row">
+				<div class="c_col col s12" data-col="c_grid_it"></div>
+			</div>
+		</section>
+		-->
+
+		
+		<!--
+		<div style="position: fixed; bottom: 20px; left: 20px;">
+			<a class="btn-floating btn-large_sub waves-effect waves-light btn-green_sub add1_temp animated fadeInUp" data-lnk='_lnk_open_modal_it_add' data-vs_v="n" data-vs_n="s" data-vs_e="s"></a>
+		</div>
+		-->
+
+		<a class="btn-floating btn-large_sub waves-effect waves-light btn-green_sub add1_temp animated fadeInUp" data-lnk='_lnk_open_modal_it_add' style="position: fixed; bottom: 20px; left: 20px;" data-vs_v="n" data-vs_n="s" data-vs_e="n"></a>
+
+	</div>
+</form>
+
+<!-- =============================================================================== -->
+
+<!-- Modal Email -->
+<div id="mdl_email" class="modal" data-button_close="in">
+
+    <header class="modal_header">
+        <div class="modal_header_inner">
+            <h3 class="m-all-0">Correo electronico</h3>
+        </div>
+    </header>
+
+    <!-- <div class="modal-content ft_sc"> -->
+    <div class="modal-content" style="padding-bottom: 0;">
+
+        <div class="row ft_3">
+            <div class="col s12">
+                <p class="mg_hz_none" style="font-family: 'Varela Round'; font-size: 14px;">El documento se enviara a la direccion de correo electronico.</p>
+            </div>
+        </div>
+
+        <div class="row" style>
+            <form class="col s12">
+                <div class="row modal-form-row ft_sc">
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Correo electronico</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div class='modal-footer t-aln-r'>
+        <button id='' class='button-1 waves-effect' style='top: 8px; margin-right: 4px;' onclick='f_add_'>Seleccionar</button>
+        <!-- <button class='button-1 waves-effect modal-close' style='top: 8px;'>Cancelar</button> -->
+    </div>
+
+</div>
+
+<!-- Modal Seleccion Item -->
+<div id="mdl_grid_it_seleccion" class="modal width_50" data-button_close="out">
+    <header class="modal_header">
+        <div class="modal_header_inner">
+            <h3 class="m-all-0">Seleccionar tipo de item</h3>
+        </div>
+    </header>
+    <div class="modal-content p-all-15">
+        <div class="row row-ft3">
+            <div class="col s12">
+                <p class="m-all-0">Seleccione el tipo de item que desea ingresar. Bien (articulos, productos, etc.) en el caso de tangibles, y Servicio (mano de obra, cobro de servicio, etc.) en el caso de intangibles.</p>
+            </div>
+        </div>
+        <div class="nav-mosaico center st-2">
+            <div class="nav-mosaico-content" style="height: 145px;">
+                <div class="nav-mosaico-content-item waves-effect waves-light-05" data-lnk='_lnk_open_modal_it_b'>
+                    <div class="nav-mosaico-content-item-image img_delivery_1"></div>
+                    <div class="nav-mosaico-content-item-label"><span>Bien</span></div>
+                </div>
+                <div class="nav-mosaico-content-item waves-effect waves-light-05" data-lnk='_lnk_open_modal_it_s'>
+                    <div class="nav-mosaico-content-item-image img_settings_1"></div>
+                    <div class="nav-mosaico-content-item-label"><span>Servicio</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+
+
+-->
+
+<!-- Modal Item -->
+<!-- <div id="mdl_grid_it" class="modal modal-fixed-footer modal-find-standard row-fixed-1 modal-footer-simple width_55 height_90" data-button_close='out'> -->
+<div id="mdl_grid_it" class="modal modal-fixed-footer_ft_1 width_55 height_90" data-button_close='out'>
+    <header class="modal_header">
+        <div class="modal_header_inner">
+            <h3 class='m-all-0'>Detalle del item</h3>
+        </div>
+    </header>
+    
+	<div class='modal-content st_lks height_-119px'>
+
+		<form id="frm_grid_it" class="full_height">
+		
+			<div class="col s12 sub_container full_height">
+			
+				<div class="col s12 full_height">
+					
+					<section class='ft_1'>
+						<div class='row'>
+							<div class="col s12">
+								<div class='col_label' data-col='ctipo_it'>Tipo</div>
+							</div>
+							<div class="col s3 hide_for_1200px">
+								<input type="text" placeholder="" value="" class='lks' data-col='ccod_it' readonly />
+							</div>
+							<div class="col s12 m12 l12 xl9">
+								<input type="text" placeholder="" value="" class='lks' data-col='cdsc_it' readonly />
+							</div>
+						</div>
+					</section>
+					
+					<section class='ft_1' id="mdl_grid_it_sc_2">
+						<div class='row'>
+							<div class="col s12">
+								<div class='col_label'>Almacén</div>
+							</div>
+							<div class="col s2 hide_for_600px">
+								<input type="text" class='lks' data-col='ccod_alm' placeholder="" value="" readonly />
+							</div>
+							<div class="col s12 m10 l10 xl10">
+								<input type="text" class='lks' data-col='cdsc_alm' placeholder="" value="" readonly />
+							</div>
+						</div>
+					</section>
+
+					<!-- <div class="modal-sub-content p-right-15 div_width_15px" data-col="scroll_div_mdl_grid_it_1" data-col_2="div_width_10px"> -->
+					<div class="modal-sub-content" data-col="scroll_div_mdl_grid_it_1" data-col_2="div_width_10px">
+					
+						<section class='ft_1'>
+							<div class="row">
+								<div class="col s12">
+									<div class='col_label_head'>Datos de la Venta</div>
+								</div>
+							</div>
+							<div class='row'>
+								<div class="col s3">
+									<div class='col_label'>Cantidad</div>
+									<input type="text" placeholder="" value="" class="lks text_align_right f_sin ft_cero_vacio" data-col='ncant' data-clear="n" data-hb_v="n" data-hb_n="s" data-hb_e="n" required />
+								</div>
+								<div class="col s4">
+									<div class='col_label'>U/M</div>
+									<select class="select2 s2" data-col='um' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="n" data-zi="mdl_grid_it" required></select>
+								</div>
+								<div class="col s3" id="frm_grid_it_c_nsaldo">
+									<div class='col_label'>Stock</div>
+									<input type="text" data-col='nsaldo' placeholder="" value="" class="lks text_align_right f_sin" readonly />
+								</div>
+								<!-- ============================================================================================================== -->
+								<!--
+								<div class="nav-hz_right">
+									<a data-lnk='_lnk_open_modal_sub_detalles' class="waves-effect waves-light img_code"></a>
+								</div>
+								-->
+								<!-- ============================================================================================================== -->
+							</div>
+							<div class='row'>
+								<div class="col s3">
+									<div class='col_label' data-col='label_precio'>Precio</div>
+									<input type="text" placeholder="" value="" class="lks text_align_right f_imp" data-col='nimp_lp_u' data-clear="n" data-hb_v="n" data-hb_n="n" data-hb_e="n" />
+								</div>
+								<div class="col s4">
+									<div class='col_label'>Moneda</div>
+									<input type="text" placeholder="" value="" class='lks' data-col='cdsc_mon' readonly />
+								</div>
+								<div class="col s5">
+									<div class='col_label'>Lista de Precio</div>
+									<select class="select2 s2" data-col='lp' data-allow-clear='false' data-hb_v="n" data-hb_n="s" data-hb_e="n" data-zi="mdl_grid_it" required></select>
+								</div>
+							</div>
+						</section>
+						
+						<section class='ft_1'>
+							<div class='row'>
+								<div class="col s3">
+									<div class='col_label'>Sub Total</div>
+									<input type="text" placeholder="" value="" class="lks text_align_right f_imp" data-col='nimp_n_ms' readonly />
+								</div>
+								<div class="col s3">
+									<div class='col_label' data-lnk='_lnk_open_modal_it_dsc' data-hb_v="s" data-hb_n="s" data-hb_e="s">Descuentos</div>
+									<input type="text" placeholder="" value="" class="lks text_align_right f_imp" data-col='nimp_d_ms' readonly />
+								</div>
+								<div class="col s3">
+									<div class='col_label'>Impuestos</div>
+									<input type="text" placeholder="" value="" class="lks text_align_right f_imp" data-col='nimp_i_ms' readonly />
+								</div>
+								<div class="col s3">
+									<div class='col_label font_weight_bold'>Total</div>
+									<span class="input-csim left">
+										<input type="text" placeholder="" value="" class="lks text_align_right font_weight_bold f_imp" data-col='nimp_t_ms' readonly />
+									</span>
+								</div>
+							</div>
+						</section>
+						
+						<section class='ft_1'>
+							<div class='row'>
+								<div class="col s12">
+									<div class='col_label'>Glosa</div>
+									<input type="text" placeholder="" value="" class='lks' data-col='cglosa' data-hb_v="n" data-hb_n="s" data-hb_e="n" />
+								</div>
+							</div>
+						</section>
+
+					</div>
+				
+				</div>
+			
+			</div>
+
+		</form>
+	</div>
+
+    <div class="modal-footer">
+        <button class="button-1 waves-effect" data-lnk='_lnk_grid_it_aceptar'>Agregar</button>
+        <button class="button-1 waves-effect modal-close">Cancelar</button>
+    </div>
+</div>
+
+
+<div id="mdl_grid_al_it_saldo_x_alm" class="modal modal-fixed-footer right-sheet height_100 mdl_top_0" data-button_close='in'>
+    
+	<header class="modal_header">
+		<div class="modal_header_inner">
+			<h3 class='m-all-0'>Saldos por Almacén</h3>
+		</div>
+    </header>
+	
+    
+	<!-- Content -->
+	<div class='modal-content st_lks' style="height: calc(100% - 263px) !important; margin-top: 207px !important;">
+	
+		<!-- Fixed -->
+		<div class='fixed_ft_1'>
+			
+			<section class='ft_top_vw'>
+				
+				<div class="row m-p-all-0">
+				
+					<div class="" style="width: 100px; float: left; text-align: center;">
+						<div class="nav-mosaico" style="">
+							<div class="nav-mosaico-content-item-image img_alm_2" style="margin-top: 4px;"></div>
+						</div>
+					</div>
+					
+					<div class="" style="width: calc(100% - 100px) !important; float: left; padding-left: 5px; padding-right: 0px; padding-top: 9px; padding-bottom: 0px;">
+						<div class='row' style="padding-bottom: 3px;">
+
+							<div class="col s12" style="margin-bottom: 2px;">
+								<div style="font-size: 20px; font-weight: bold; width: 100%;" class="my_elipsis">Descripcion del articulo Descripcion del articulo Descripcion del articulo Descripcion del articulo</div>
+							</div>
+							
+							<div class="col s12" style="margin-bottom: 4px;">
+								<div>Unidad</div>
+							</div>
+							
+							<div class="col s12">
+								<div>Saldo: <span style="font-weight: bold;">120 Unidades</span> </div>
+							</div>
+
+						</div>
+					</div>
+					
+				</div>
+			
+			</section>
+			
+			<section class='ft_vw no-head'>
+				<div class="row">
+					<div class="col s3" data-col='c_s_grid_al_it_saldo_x_alm_filtros'>
+						<div class='col_label'>Filtrar por</div>
+					</div>
+					<div class="col s4">
+						<div class='col_label'>Valor</div>
+						<input class='lks' placeholder="Digite valor a buscar" value="" type="text" data-col="i_filter_grid_al_it_saldo_x_alm" />
+					</div>
+					<div class="col s5" data-col="grid_al_it_saldo_x_alm_length_c">
+						<div class='col_label'> </div>
+					</div>
+				</div>
+			</section>
+			
+		</div>
+
+		<section class='ft_table'>
+			<div class="row">
+				<div class="c_col col s12" data-col="c_grid_al_it_saldo_x_alm"></div>
+			</div>
+		</section>
+
+	</div>
+
+</div>
+
+<!-- Modal Anulacion -->
+<!-- <div id='mdl_anulacion' class='modal modal-fixed-footer modal-find-standard-mtz modal-footer-simple modal-search height_60 width_65' data-button_close='out'> -->
+<div id='mdl_anulacion' class='modal modal-fixed-footer modal-find-standard-mtz modal-footer-simple height_60 width_65' data-button_close='out'>
+	<header class='modal_header'>
+		<div class='modal_header_inner'>
+			<h3 class='m-all-0'>Emisión de Notas de Crédito Electrónicas</h3>
+		</div>
+	</header>
+	
+	<form id="form_anulacion" class='mtz'>
+	<div class='modal-content m-all-0 p-hor-0 p-top-25 p-bottom-0'>
+	
+		<div class="col s4">
+			<section class='section_form mtz'>
+				<div class="row row-head">
+					<div class="col s12">
+						<label>Venta relacionada</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="lks input-field col s4">
+						<label>Documento</label>
+						<input placeholder="" type="text" data-col='ccod_doc' readonly />
+					</div>
+					<div class="lks input-field col s3">
+						<label>Serie</label>
+						<input placeholder="" type="text" data-col='ccod_ser' readonly />
+					</div>
+					<div class="lks input-field col s5">
+						<label>Numero</label>
+						<input placeholder="" type="text" data-col='cdoc_nro' readonly />
+					</div>
+				</div>
+			</section>
+			<section class='section_form mtz'>
+				<div class="row row-head">
+					<div class="col s12">
+						<label>Nota de Crédito Generada</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="lks input-field col s4">
+						<label>Documento</label>
+						<input placeholder="" type="text" data-col='ccod_doc_ref' readonly />
+					</div>
+					<div class="lks input-field col s3">
+						<label>Serie</label>
+						<input placeholder="" type="text" data-col='ccod_ser_ref' readonly />
+					</div>
+					<div class="lks input-field col s5">
+						<label>Numero</label>
+						<input placeholder="" type="text" data-col='cdoc_nro_ref' readonly />
+					</div>
+				</div>
+			</section>
+		</div>
+		
+		<div class="col s8">
+   
+			<section class='section_form mtz'>
+				<div class="row row-head">
+					<div class="col s12">
+						<label>Anulación</label>
+					</div>
+				</div>
+				<!-- =============================== -->
+				<!--
+				<div class='row'>
+					<div class='lks input-field select2-mtz col s6'>
+						<select class="select2 mtz" data-col='tnc1' data-allow-clear='false' data-zi='mdl_anulacion'></select>
+						<label>Unidad de Medida</label>
+					</div>
+					<div class='lks input-field col s6'>
+						<select class='' data-col='tnc'></select>
+						<label>Tipo de Nota de Crédito</label>
+					</div>
+				</div>
+				-->
+
+				<div class='row'>
+					<div class='lks input-field select2-mtz col s12 p-all-0'>
+						<label data-col_dsc='tpa'>Tipo de Nota de Crédito</label>
+
+						<div class='lks input-field input-mtz col s2'>
+							<input placeholder="" type="text" data-col='ccod_tpa' readonly />
+						</div>
+
+						<div class='lks input-field select2-mtz col s10'>
+							<select class="select2 mtz" data-col='tpa' data-allow-clear='true' data-i_ccod data-zi='mdl_anulacion' data-hb_v="n" data-hb_n="s" data-hb_e="n" required></select>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="lks input-field col s12">
+					     <!-- <input id="email2" type="text" class="validate invalid" required="" aria-required="true"> -->
+						 
+						<!-- <textarea placeholder="" class="materialize-textarea validate" data-col='cmotivo_anu' required></textarea> -->
+						<textarea placeholder="" class="materialize-textarea validate" data-col='cmotivo_anu' data-hb_v="n" data-hb_n="s" data-hb_e="n" required></textarea>
+						<label data-col_dsc='cmotivo_anu'>Motivo o sustento por el cual se emitirá la Nota de Crédito</label>
+					</div>
+				</div>
+				
+			</section>
+		
+		</div>
+	
+	</div>
+	</form>
+	
+	<div class='modal-footer'>
+		<button class='button-1 waves-effect' data-lnk='_lnk_mdl_anulacion_aceptar'>Aceptar</button>
+		<button class='button-1 waves-effect modal-close'>Cancelar</button>
+	</div>
+	
+</div>
+
+
+
+
+
+
+<div id='mdl_estados' class='modal simple width_50 height_90' data-button_close='out' style="background: #f7f7f7; margin-top: 10px !important">
+	<header class='modal_header'>
+		<div class='modal_header_inner'>
+			<h3 class='m-all-0'>Historial de estados</h3>
+		</div>
+	</header>
+	
+	<!-- <form id="form_anulacion" class='mtz'> -->
+	<form id="form_anulacion1">
+	
+	<div class='modal-content m-all-0 p-hor-0 p-top-15 p-bottom-0' data-col="scroll_div_mdl_estados" data-col_2="div_width_-5px">
+
+		<div class="col s12">
+			<section class='section_form mtz time_line'>
+				
+				<!--
+				<div class="row row-head">
+					<div class="col s12">
+						<label>Venta relacionada</label>
+					</div>
+				</div>
+				-->
+				
+				
+				
+				<!-- ============================================================================= -->
+				<div class="row">
+					<div class="col s12 contenedor_items_center">
+						
+						<div class="container_tl">
+							<div class="timeline">
+							
+							
+								<div class="timeline-container primary">
+									<div class="timeline-icon contenedor_items_center">
+										<!-- <i class="far fa-grin-wink"></i> -->
+										<div class="img img_ven_1"></div>
+									</div>
+									<div class="timeline-body lks_box_shadow_1">
+										<div class='ocultar'></div>
+										<div class="row fecha">
+											<div class="col s12">
+												<div class='col_label'>Jueves, 17 Enero del 2021</div>
+											</div>
+										</div>
+										<div class="row hora">
+											<div class="col s12">
+												<div class='col_label'>07:45 P.M.</div>
+											</div>
+										</div>
+										<div class="row detalle">
+											<div class="col s12">
+												<div class='col_label'>Registro de Venta F01-00012421</div>
+											</div>
+										</div>
+										<div class="row footer">
+											<div class="col s8">
+												<p class="timeline-subtitle">Hace 2 horas</p>
+											</div>
+											<div class="col s4 contenedor_items_right">
+												<div data-col="cdsc_est" class="c_span_label"><span class="span_label label-danger">Anulado</span></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							
+								<div class="timeline-container primary">
+									<div class="timeline-icon contenedor_items_center">
+										<!-- <i class="far fa-grin-wink"></i> -->
+										<div class="img img_alm_4"></div>
+										<!-- <div class="img img_alm_3"></div> -->
+									</div>
+									<div class="timeline-body lks_box_shadow_1">
+										<div class='ocultar'></div>
+										<div class="row fecha">
+											<div class="col s12">
+												<div class='col_label'>Jueves, 17 Enero del 2021</div>
+											</div>
+										</div>
+										<div class="row hora">
+											<div class="col s12">
+												<div class='col_label'>07:45 P.M.</div>
+											</div>
+										</div>
+										<div class="row detalle">
+											<div class="col s12">
+												<div class='col_label'>Registro de Salida de Almacen F01-00012421</div>
+											</div>
+										</div>
+										<div class="row footer">
+											<div class="col s8">
+												<p class="timeline-subtitle">Hace 2 horas</p>
+											</div>
+											<div class="col s4 contenedor_items_right">
+												<div data-col="cdsc_est" class="c_span_label"><span class="span_label label-danger">Anulado</span></div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="timeline-container primary">
+									<div class="timeline-icon contenedor_items_center">
+										<!-- <i class="far fa-grin-wink"></i> -->
+										<div class="img img_tes_1"></div>
+									</div>
+									<div class="timeline-body lks_box_shadow_1">
+										<div class='ocultar'></div>
+										<div class="row fecha">
+											<div class="col s12">
+												<div class='col_label'>Jueves, 17 Enero del 2021</div>
+											</div>
+										</div>
+										<div class="row hora">
+											<div class="col s12">
+												<div class='col_label'>07:45 P.M.</div>
+											</div>
+										</div>
+										<div class="row detalle">
+											<div class="col s12">
+												<div class='col_label'>Registro de Ingreso a Tesoreria F01-00012421</div>
+											</div>
+										</div>
+										<div class="row footer">
+											<div class="col s8">
+												<p class="timeline-subtitle">Hace 2 horas</p>
+											</div>
+											<div class="col s4 contenedor_items_right">
+												<div data-col="cdsc_est" class="c_span_label"><span class="span_label label-danger">Anulado</span></div>
+											</div>
+										</div>
+									</div>
+								</div>
+									
+
+
+								
+								
+							</div>
+						</div>
+		
+		
+						
+						
+					</div>
+				</div>
+				
+				
+				
+				
+			</section>
+			
+			
+			
+			
+		</div>
+		
+	
+	
+	
+	</div>
+	</form>
+	
+	<!--
+	<div class='modal-footer'>
+		<button class='button-1 waves-effect' data-lnk='_lnk_mdl_anulacion_aceptar'>Aceptar</button>
+		<button class='button-1 waves-effect modal-close'>Cancelar</button>
+	</div>
+	-->
+	
+</div>
+
+
+<!-- Modal Anulacion -->
+<!-- <div id='mdl_tt' class='modal modal-fixed-footer modal-find-standard-mtz modal-footer-simple width_65 height_60' data-button_close='out'> -->
+<div id='mdl_tt' class='modal modal-fixed-footer modal-find-standard-mtz modal-footer-simple width_35 height_90' data-button_close='out'>
+	<header class='modal_header'>
+		<div class='modal_header_inner'>
+			<h3 class='m-all-0'>Detalles de totales</h3>
+		</div>
+	</header>
+	
+	<form id="form_anulacion" class='mtz'>
+	<div class='modal-content m-all-0 p-hor-0 p-top-25 p-bottom-0'>
+	
+		<div class="col s12">
+			<section class='section_form mtz'>
+				
+				<!--
+				<div class="row row-head">
+					<div class="col s12">
+						<label>Venta relacionada</label>
+					</div>
+				</div>
+				-->
+				
+				
+				
+				<!-- ============================================================================= -->
+				<div class="row">
+					<div class="lks input-field col s4">
+						<label>SUB TOTAL VENTAS</label>
+						<input placeholder="" type="text" data-col='ccod_doc' readonly />
+					</div>
+					<div class="lks input-field col s4">
+						<label>ANTICIPOS</label>
+						<input placeholder="" type="text" data-col='ccod_ser' readonly />
+					</div>
+					<div class="lks input-field col s4">
+						<label>DESCUENTOS</label>
+						<input placeholder="" type="text" data-col='cdoc_nro' readonly />
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="lks input-field col s4">
+						<label>VALOR DE VENTA</label>
+						<input placeholder="" type="text" data-col='ccod_doc' readonly />
+					</div>
+					<div class="lks input-field col s4">
+						<label>ISC - IMPUESTO SELECCTIVO AL CONSUMO</label>
+						<input placeholder="" type="text" data-col='ccod_ser' readonly />
+					</div>
+					<div class="lks input-field col s4">
+						<label>OPERACIONES GRAVADAS</label>
+						<input placeholder="" type="text" data-col='cdoc_nro' readonly />
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="lks input-field col s4">
+						<label>OPERACIONES INAFECTAS</label>
+						<input placeholder="" type="text" data-col='ccod_doc' readonly />
+					</div>
+					<div class="lks input-field col s4">
+						<label>OPERACIONES EXONERADAS (AMAZONIA)</label>
+						<input placeholder="" type="text" data-col='ccod_ser' readonly />
+					</div>
+					<div class="lks input-field col s4">
+						<label>IGV</label>
+						<input placeholder="" type="text" data-col='cdoc_nro' readonly />
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="lks input-field col s4">
+						<label>IMPUESTO AL CONSUMO DE BOLSAS PERU - ICBPER</label>
+						<input placeholder="" type="text" data-col='ccod_doc' readonly />
+					</div>
+					<div class="lks input-field col s4">
+						<label>OTROS CARGOS</label>
+						<input placeholder="" type="text" data-col='ccod_ser' readonly />
+					</div>
+					<div class="lks input-field col s4">
+						<label>OTROS TRIBUTOS</label>
+						<input placeholder="" type="text" data-col='cdoc_nro' readonly />
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="lks input-field col s4">
+						<label>TOTAL</label>
+						<input placeholder="" type="text" data-col='ccod_doc' readonly />
+					</div>
+					<div class="lks input-field col s4">
+						<label>PERCEPCIONES</label>
+						<input placeholder="" type="text" data-col='ccod_ser' readonly />
+					</div>
+					<div class="lks input-field col s4">
+						<label>RETENCIONES</label>
+						<input placeholder="" type="text" data-col='cdoc_nro' readonly />
+					</div>
+				</div>
+				
+				
+				
+				<!-- ============================================================================= -->
+				
+				
+				
+				<!--
+				<div class="row">
+					<div class="lks input-field col s3">
+						<label>SUB TOTAL VENTAS</label>
+						<input placeholder="" type="text" data-col='ccod_doc' readonly />
+					</div>
+					<div class="lks input-field col s3">
+						<label>ANTICIPOS</label>
+						<input placeholder="" type="text" data-col='ccod_ser' readonly />
+					</div>
+					<div class="lks input-field col s3">
+						<label>DESCUENTOS</label>
+						<input placeholder="" type="text" data-col='cdoc_nro' readonly />
+					</div>
+					<div class="lks input-field col s3">
+						<label>VALOR DE VENTA</label>
+						<input placeholder="" type="text" data-col='cdoc_nro' readonly />
+					</div>
+				</div>
+				
+				
+				<div class="row">
+					<div class="lks input-field col s3">
+						<label>ISC - IMPUESTO SELECCTIVO AL CONSUMO</label>
+						<input placeholder="" type="text" data-col='ccod_doc' readonly />
+					</div>
+					<div class="lks input-field col s3">
+						<label>OPERACIONES GRAVADAS</label>
+						<input placeholder="" type="text" data-col='ccod_ser' readonly />
+					</div>
+					<div class="lks input-field col s3">
+						<label>OPERACIONES INAFECTAS</label>
+						<input placeholder="" type="text" data-col='cdoc_nro' readonly />
+					</div>
+					<div class="lks input-field col s3">
+						<label>OPERACIONES EXONERADAS (AMAZONIA)</label>
+						<input placeholder="" type="text" data-col='cdoc_nro' readonly />
+					</div>
+				</div>
+				
+				
+				
+				<div class="row">
+					<div class="lks input-field col s3">
+						<label>IGV</label>
+						<input placeholder="" type="text" data-col='ccod_doc' readonly />
+					</div>
+					<div class="lks input-field col s3">
+						<label>IMPUESTO AL CONSUMO DE BOLSAS PERU - ICBPER</label>
+						<input placeholder="" type="text" data-col='ccod_ser' readonly />
+					</div>
+					<div class="lks input-field col s3">
+						<label>OTROS CARGOS</label>
+						<input placeholder="" type="text" data-col='cdoc_nro' readonly />
+					</div>
+					<div class="lks input-field col s3">
+						<label>OTROS TRIBUTOS</label>
+						<input placeholder="" type="text" data-col='cdoc_nro' readonly />
+					</div>
+				</div>
+				
+				
+				<div class="row">
+					<div class="lks input-field col s3">
+						<label>TOTAL</label>
+						<input placeholder="" type="text" data-col='ccod_doc' readonly />
+					</div>
+					<div class="lks input-field col s3">
+						<label>PERCEPCIONES</label>
+						<input placeholder="" type="text" data-col='ccod_ser' readonly />
+					</div>
+					<div class="lks input-field col s3">
+						<label>RETENCIONES</label>
+						<input placeholder="" type="text" data-col='cdoc_nro' readonly />
+					</div>					
+				</div>
+				-->
+
+			</section>
+			
+			
+			
+			
+		</div>
+		
+	
+	
+	
+	</div>
+	</form>
+	
+	<div class='modal-footer'>
+		<!-- <button class='button-1 waves-effect' data-lnk='_lnk_mdl_anulacion_aceptar'>Aceptar</button> -->
+		<button class='button-1 waves-effect modal-close'>Cancelar</button>
+	</div>
+	
+</div>
+
+
+
+
+<div id='mdl_tt1' class='modal modal-fixed-footer modal-find-standard modal-footer-simple width_25 height_60' data-button_close='out'>
+	<header class='modal_header'>
+		<div class='modal_header_inner'>
+			<h3 class='m-all-0'>Detalles de totales</h3>
+		</div>
+	</header>
+	<form id='frm_grid_export'>
+		<div class='modal-content p-hor-10 p-top-25 p-bottom-5'>
+			
+			
+			
+			<!--
+			<section class='section_form mtz'>
+				<div class="row row-head">
+					<div class="col s12">
+						<label>Venta relacionada</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="lks input-field col s4">
+						<label>Documento</label>
+						<input placeholder="" type="text" data-col='ccod_doc' readonly />
+					</div>
+					<div class="lks input-field col s3">
+						<label>Serie</label>
+						<input placeholder="" type="text" data-col='ccod_ser' readonly />
+					</div>
+					<div class="lks input-field col s5">
+						<label>Numero</label>
+						<input placeholder="" type="text" data-col='cdoc_nro' readonly />
+					</div>
+				</div>
+			</section>
+			-->
+			
+			
+			<section class='section_form'>
+			
+				<div class='row'>
+					<div class='col s12'>
+						<label>1. Sub Total Ventas</label>
+					</div>
+
+					<div class="lks input-field col s4">
+						<!-- <label>1. Sub Total Ventas</label> -->
+						<input placeholder="" type="text" data-col='ccod_doc' readonly />
+					</div>
+					
+				</div>
+				
+				
+				
+				<div class='row'>
+					<div class='col s12'>
+						<label>1. Sub Total Ventas2</label>
+					</div>
+
+					<div class="lks input-field col s4">
+						<!-- <label>1. Sub Total Ventas</label> -->
+						<input placeholder="" type="text" data-col='ccod_doc' readonly />
+					</div>
+					
+				</div>
+				
+				
+				<div class='row'>
+					<div class='col s12'>
+						<label>Columnas</label>
+					</div>
+					<div class='lks input-field col s12'>
+						<select data-col='s_grid_col_export'>
+							<option value='col_a'>Todos las columnas</option>
+							<option value='col_v' selected>Columnas visibles</option>
+						</select>
+						<!-- <label>Materialize Select</label> -->
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col s12'>
+						<label>Formato</label>
+					</div>
+					<div class='lks input-field col s12'>
+						<select data-col='s_grid_format_export'>
+							<option value='xls' selected>Excel</option>
+							<option value='pdf'>PDF</option>
+							<option value='print'>Imprimir</option>
+						</select>
+						<!-- <label>Materialize Select</label> -->
+					</div>
+				</div>
+			</section>
+		</div>
+	</form>
+	<div class='modal-footer'>
+		<!-- <button class='button-1 waves-effect' data-lnk='_lnk_table_export_excel'>Exportar</button> -->
+		<button class='button-1 waves-effect modal-close'>Cancelar</button>
+	</div>
+</div>
+
+@section scripts
+{
+<script type="text/javascript" src="../../scripts/lks/mdl_it.js"></script> <!-- CREO QUE ESTO VA AL LAYOUTMaster -->
+<script type="text/javascript" src="../../scripts/lks/mdl_mon.js"></script>
+<script type="text/javascript" src="../../scripts/lks/frm_ve_ts_ve.js"></script>
+
+<!-- <script type="text/javascript" src="../../scripts/lks/frm_em_dir_html.js"></script> -->
+<!-- <script type="text/javascript" src="../../scripts/lks/frm_em_dir.js"></script> -->
+
+<!-- <script type="text/javascript" src="../../scripts/lks/frm_em_prs_html.js"></script> -->
+<!-- <script type="text/javascript" src="../../scripts/lks/frm_em_prs_foraneo.js"></script> -->
+}
