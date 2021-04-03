@@ -10,6 +10,7 @@ namespace Centrix.Common
     {
         public enum Variable
         {
+
             IdPersonal,
             NombreUsuario,
             ApellidoPaterno,
